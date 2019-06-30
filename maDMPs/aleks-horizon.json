@@ -1,0 +1,104 @@
+{
+	"dmp": {
+		"contact": {
+			"contact_id": {
+				"contact_id": "https://orcid.org/0000-0001-6887-9515",
+				"contact_id_type": "HTTP-ORCID"
+			},
+			"mail": "e01525707@student.tuwien.ac.at",
+			"name": "Aleksandar Pavlovic"
+		},
+		"cost": [],
+		"created": "2019-04-22 23:58",
+		"dm_staff": [{
+			"contributor_type": "DataManager",
+			"mbox": "e01525707@student",
+			"name": "Aleksandar Pavlovic",
+			"staff_id": {
+				"staff_id": "0000-0001-6887-9515",
+				"staff_id_type": "ORCID"
+			}
+		},
+		{
+			"contributor_type": "ProjectLeader",
+			"mbox": "e01525707@student",
+			"name": "Aleksandar Pavlovic",
+			"staff_id": {
+				"staff_id": "0000-0001-6887-9515",
+				"staff_id_type": "ORCID"
+			}
+		}],
+		"dmp_id": {
+			"dmp_id": "10.5281/zenodo.2648805",
+			"dmp_id_type": "HTTP-DOI"
+		},
+		"dataset": [{
+			"data_quality_assurance": "File naming conventions (separation by underscores) were used. Furthermore a GitHub repository was used for data versioning. Also metadata was provided for this dataset, since it was internally generated.",
+			"dataset_id": {
+				"dataset_id": "10.5281/zenodo.2648703",
+				"dataset_id_type": "HTTP-DOI"
+			},
+			"description": "Internally generated dataset, that was merge from two external datasets.",
+			"distribution": [{
+				"access_url": "https://zenodo.org/record/2648703#.XRkCdW5uLD4",
+				"available_till": "2019-08-31",
+				"byte_size": 362,
+				"data_access": "open",
+				"description": "",
+				"download_url": "https://zenodo.org/record/2648703#.XRkCdW5uLD4",
+				"format": "csv",
+				"host": {
+					"availability": "",
+					"backup__frequency": "never",
+					"backup_type": "",
+					"certified_with": "",
+					"description": "GitHub repository",
+					"geo_location": "",
+					"pid_system": ["10.5281/zenodo.1209833"],
+					"support_versioning": "yes",
+					"title": "Effect-GlobalTemperature-NumberOfBirthsVienna",
+				},
+				"license": [{
+					"license_ref": "https://opensource.org/licenses/MIT",
+					"start_date": "2019-04-22"
+				}],
+				"title": "mergedData"
+			}],
+			"issued": "2019-04-22",
+			"keyword": ["mean near surface temperature deviation", "number of live-births in Vienna"],
+			"language": "en",
+			"metadata": {
+				"description": "Provides an explanation of the columns of the dataset.",
+				"language": "en",
+				"metadata_id": {
+					"metadata_id": , //TODO: Create a metadata id
+					"metadata_id_type":
+				}
+			},
+			"personal_data": "no",
+			"preservation_statement": "Should be preserved for a maximum of about 2 to 5 years, as it will get very outdated and presumably of only little interest to the public afterwards.",
+			"security_and_privacy": [{
+				"description": "The data is safely stored in a public GitHub repository.",
+				"title": "Data write access control"
+			}] ,
+			"sensitive_data": "no",
+			"technical_resource": [],
+			"title": "mergedData",
+			"type": "dataset"
+		}],
+		"description": "This DMP was created for the project ''Effect-GlobalTemperature-NumberOfBirthsVienna''",
+		"ethical_issues_description": "There are no ethical issues",
+		"ethical_issues_exist": "no",
+		"ethical_issues_report": "",
+		"language": "en",
+		"modified": "2019-04-22 23:58",
+		"project": [{
+			"description": "The aim of this pseudo project is to analyze the relation between the global temperature change and the number of children born alive in Vienna. The experiment is conducted, by means of visual data science (exploring the data by plotting it in an appropriate manner). ",
+			"end": "2019-04-22",
+			"funding": "",
+			"start": "2019-04-21",
+			"title": "Effect-GlobalTemperature-NumberOfBirthsVienna"
+		}],
+		"title": "DMP for the ''Effect-GlobalTemperature-NumberOfBirthsVienna''-project"
+	}
+}
