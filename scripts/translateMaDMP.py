@@ -7,14 +7,17 @@ import pdfkit
 input = "../maDMPs/sample.json" # Input file
 output = "../hrDMPs/out" # Output file (html + pdf)
 # Chosen template
-template = "Horizon" # "FWF"
+template = "FWF" # "FWF"
 
 pdf_options = {
-    'page-size': 'A4',
-    'orientation': 'landscape'
+    "page-size": "A4",
+    "orientation": "portrait"
 }
 
-pdf_options["orientation"] = "landscape"
+# TODO more things depending on template
+if template == "FWF":
+    pdf_options["orientation"] = "landscape"
+
 
 def get_contact(ma_dmp):
     return ma_dmp["dmp"]["contact"]["name"], \
