@@ -2,16 +2,19 @@ import json
 import jinja2
 import pdfkit
 # import wkhtmltopdf
-import subprocess
+# import subprocess
 
-input = "../maDMPs/sample.json"
-output = "../hrDMPs/out"
-template = "FWF"
+input = "../maDMPs/sample.json" # Input file
+output = "../hrDMPs/out" # Output file (html + pdf)
+# Chosen template
+template = "Horizon" # "FWF"
 
 pdf_options = {
     'page-size': 'A4',
     'orientation': 'landscape'
 }
+
+pdf_options["orientation"] = "landscape"
 
 def get_contact(ma_dmp):
     return ma_dmp["dmp"]["contact"]["name"], \
@@ -35,6 +38,7 @@ def create_html(text, template, output):
     :return: Name of the output file (html)
     """
 
+    # TODO uncomment this for orginal DMP format (right now difficult with differing section sizes)
     #templateLoader = jinja2.FileSystemLoader(searchpath="../templates/new")
     templateLoader = jinja2.FileSystemLoader(searchpath="../templates")
     templateEnv = jinja2.Environment(loader=templateLoader)
@@ -58,6 +62,7 @@ def create_pdf(html, options):
     """
 
     # TODO: we will change this path, or use an other library for converting PDF!
+    # TODO: otherwise just say that wkhtmltopdf needs to be pre-installed (and how) and added to windows path
     path_wkthmltopdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
     config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
 
