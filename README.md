@@ -33,8 +33,7 @@ Also, the software  ```wkhtmltopdf ``` needs to be installed, for the creation o
 
 ## How-to
 
-We want to show some use-case how to use our tool for an effective translation of maDMPs into hrDMPs. Some examples can be found here.
-TODO
+We want to show some use-case how to use our tool for an effective translation of maDMPs into hrDMPs. Some examples can be found here: [How-To](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md).
 
 ## Original human-readable DMPs
 
