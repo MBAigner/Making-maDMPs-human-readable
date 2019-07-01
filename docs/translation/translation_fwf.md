@@ -24,13 +24,13 @@ What information is needed for the data to be findable, accessible, interoperabl
     *	Dataset /Distribution/Host/description -> which repo was used
     *	pid_system (if used!)
 *	findable:
-  *	Dataset/keyword -> keywords usable for search
+    *	Dataset/keyword -> keywords usable for search
 *	re-usable:
-  *	dataset/licence/license_ref -> which licence was used for reusability
-  *	Metadata used -> see above (Dataset/ metdata/metadata_id/metadata_id + Dataset/ metdata/metadata_id/metadata_id_type)
-  *	Metdata/language + dataset/language
-  *	Dataset/data_quality_assurance (e.g. naming conventions)
-  *	distribution/host/backup_frequency + distribution/host/backup_type +
+    *	dataset/licence/license_ref -> which licence was used for reusability
+    *	Metadata used -> see above (Dataset/ metdata/metadata_id/metadata_id + Dataset/ metdata/metadata_id/metadata_id_type)
+    *	Metdata/language + dataset/language
+    *	Dataset/data_quality_assurance (e.g. naming conventions)
+    *	distribution/host/backup_frequency + distribution/host/backup_type +
 
 Is the data machine-readable? 
 *	interoperable: See if dataset/distribution/format is machine readable (in principle -> csv could still be bad -> thus let user change stuff in editor!)
@@ -44,31 +44,31 @@ How are you planning to document this information?
 How will the consistency and quality of data collection be controlled and documented? (This may include processes such as repeat samples or measurements, standardised data capture, peer review of data or representation with controlled vocabularies.)
 *	Not explained in JSON!
 
-•	How and when will the data be shared and made accessible? 
+How and when will the data be shared and made accessible? 
 
 *	Dataset/Distribution/access_url
-Dataset/Distribution/available_till
-Dataset/Distribution/data_access
-Dataset/Distribution/download_url
-Dataset/Distribution/license/licence_ref
-Dataset/Distribution/license/start_date
-Dataset/issued
+*	Dataset/Distribution/available_till
+*	Dataset/Distribution/data_access
+*	Dataset/Distribution/download_url
+*	Dataset/Distribution/license/licence_ref
+*	Dataset/Distribution/license/start_date
+*	Dataset/issued
 
 
 What repository will you be using? 
 *	Dataset/host/description
-Dataset/host/geo_location
-Dataset/host/pid_system
+*	Dataset/host/geo_location
+*	Dataset/host/pid_system
 
 What persistent identifier will be used?
 *	Dataset/dataset_id/dataset_id
-Dataset/dataset_id/dataset_id_type
+*	Dataset/dataset_id/dataset_id_type
 
-•	What data are to be preserved for the long-term, and what data will not be stored? 
+What data are to be preserved for the long-term, and what data will not be stored? 
 *	Dataset/preservation_statement
+
 How and where will the data be stored and backed up during the research? 
-*	Dataset/host/description?????? (Michael?)
-Dataset/host/geo_location
+*	Dataset/host/geo_location
 
 How and where will the data be stored after the project ends? 
 *	Dataset/preservation_statement
@@ -100,13 +100,13 @@ Are there any restrictions on the re-use of the data? If so, why?
 *	Why is not explained by maDmp
 *	Dataset/Security_and_privacy
 
-•	Are there any ethical barriers to making the research data fully or partially accessible? 
+Are there any ethical barriers to making the research data fully or partially accessible? 
 *	ethical_issues_exist, ethical_issues_description, ethical_issues_report, dataset/personal_data
 
 If applicable, how are you planning to deal with sensitive data during and after the project? 
 *	See ethical_issues_report, dataset/sensitive_data -> before and after the project is not explicitly defined
 
-•	No data will be generated or analysed
+No data will be generated or analysed
 *	Not answered by the maDMP
 
 
