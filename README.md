@@ -1,4 +1,4 @@
-# Making-maDMPs-human-readable
+# Making maDMPs human-readable
 
 ## Overview
 
@@ -29,6 +29,7 @@ Also, the software  ```wkhtmltopdf ``` needs to be installed, for the creation o
 
 ## How-to
 
+We want to show some use-case how to use our tool for an effective translation of maDMPs into hrDMPs. Some examples can be found here.
 
 ## Original human-readable DMPs
 
@@ -40,7 +41,9 @@ The machine-actionable DMPs used for the evaluation of our tool can be used [her
 
 ## Parsing scheme
 
-Can be found here.
+Here, we want to demonstrate the scheme we used for parsing the structured information of an maDMP into the necessary fields of an hrDMP, supporting the FWF and Horizon 2020 DMP templates.
+
+Our used scheme can be found here.
 
 ## hrDMP samples
 
