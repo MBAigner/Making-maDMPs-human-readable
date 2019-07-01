@@ -13,7 +13,7 @@ After a template was chosen - over the combobox shown in the figure -  by the us
 In the following part, the Horizon 2020 template and its content/options will be described in more detail.
 
 
-## 2. FWF-specific Screen
+## 2. Horizon 2020-specific Screen
 
 After the template is selected, the GUI elements are extended by those shown in figure 2. However, even if a certain template was selected, this can be changed every time while working with our tool.
 
