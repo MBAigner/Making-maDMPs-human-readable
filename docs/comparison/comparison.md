@@ -4,7 +4,10 @@
 
 
 ### a. How do they differ?
-TODO
+
+In general, we observed that some information of the original DMPs got lost through the conversion into an maDMP and again into a hrDMP. This was due to not finding some fields of the RDA standard containing relevant information for each subquestion contained in the templates.
+
+However, the look and feel of the content of the created DMPs is similar to the ones written by hand. There are still some differences regarding the style of the resulting hrDMPs.
 
 ## b. What information got lost?
 
@@ -38,7 +41,12 @@ For those questions, no information is provided in the maDMPs.
 
 
 ## c. Which information is more detailed?
-TODO
+
+In general, the loss of information was bigger through the conversion then additional more detailed information. However, due to the usage of the full, artificial maDMP, we included some information that was not contained in our original versions, like
+
+* Cost of the project
+* Technical devices used
+* ...
 
 ## d. Which parts of the maDMP were easy/hard to generate?
 TODO
