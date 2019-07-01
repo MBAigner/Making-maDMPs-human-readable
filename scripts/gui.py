@@ -191,6 +191,9 @@ def fillInTemplate(event=None):
             with open(file_name, 'r') as f:
                 ma_dmp = json.load(f)
 
+            dataOfficerText.delete("1.0", END)
+            dataOfficerText.insert(END, parse_contact(ma_dmp))
+
             cost_data = parse_cost(ma_dmp)
             datasetData = parse_dataset(ma_dmp)
             dataDescriptionText1.delete("1.0", END)
@@ -235,6 +238,8 @@ def fillInTemplate(event=None):
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)
+        else:
+            pass
 
 
 def resetTemplate(event=None):
