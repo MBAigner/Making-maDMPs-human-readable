@@ -11,17 +11,18 @@ How will you structure the data and handle versioning?
 *	Dataset/host/support_versioning
 
 Who is the target audience?
-*	
-•	What metadata standards (if any) will be in use and why? (see Digital Curation Centre)
+*	Could not be answered
+
+What metadata standards (if any) will be in use and why? (see Digital Curation Centre)
 *	Dataset/metadata_id/metadata_id + Dataset/metadata_id/metadata_id_type
 *	Why not explained
 
-•	What information is needed for the data to be findable, accessible, interoperable and re-usable (FAIR) in the future? 
+What information is needed for the data to be findable, accessible, interoperable and re-usable (FAIR) in the future? 
 *	Accessible:
-  *	If they use ids -> e.g. dataset/dataset_id
-  *	Dataset/Distribution/Host/certified_with  (certificates of repository)
-  *	Dataset /Distribution/Host/description -> which repo was used
-  *	pid_system (if used!)
+    *	If they use ids -> e.g. dataset/dataset_id
+    *	Dataset/Distribution/Host/certified_with  (certificates of repository)
+    *	Dataset /Distribution/Host/description -> which repo was used
+    *	pid_system (if used!)
 *	findable:
   *	Dataset/keyword -> keywords usable for search
 *	re-usable:
