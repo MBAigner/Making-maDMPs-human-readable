@@ -192,10 +192,10 @@ def fillInTemplate(event=None):
         # File exists - start parsing here!
         print("Processing JSON :))")
         # TODO this is just one use case !!
-        if selectedTemplate == "FWF":
-            with open(file_name, 'r') as f:
-                ma_dmp = json.load(f)
+        with open(file_name, 'r') as f:
+            ma_dmp = json.load(f)
 
+        if selectedTemplate == "FWF":
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, parse_contact(ma_dmp))
 
@@ -244,7 +244,8 @@ def fillInTemplate(event=None):
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)
         else:
-            pass
+            abstractText.delete("1.0", END)
+            abstractText.insert(END, parse_abstract(ma_dmp))
 
 
 def resetTemplate(event=None):

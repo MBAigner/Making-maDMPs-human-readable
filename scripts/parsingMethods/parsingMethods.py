@@ -10,6 +10,19 @@ def parse_contact(ma_dmp):
     return "The contact person of the project is " + name + ". They can be reached on the mail " \
            + mail + ". Their " + type + " is " + id + "."
 
+def parse_abstract(ma_dmp):
+    title = ma_dmp["dmp"]["title"]
+    last_modified = ma_dmp["dmp"]["modified"]
+    name, mail, id, type = get_contact(ma_dmp)
+
+    return title + "\n" + "A Data Management Plan created using DMPonline" + \
+        "Creator: " + name + "(" + str(id) + ")\n" + \
+        "Affiliation: \n" + \
+        "Template: European Commission (Horizon 2020)\n" + \
+        "Last modified: " + last_modified + "\n" + \
+        title + " - Detailed DMP \n"
+
+
 
 def parse_cost(ma_dmp):
     costs = ma_dmp["dmp"].get("cost", None)
