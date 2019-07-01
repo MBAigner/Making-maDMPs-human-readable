@@ -200,6 +200,10 @@ def fillInTemplate(event=None):
 
             docMetaText2.delete("1.0", END)
             docMetaText2.insert(END, datasetData["FAIRDataset"])
+            docMetaText2.insert(END, datasetData["metaInfo"])
+            docMetaText2.insert(END, datasetData["DataQuality"])
+            docMetaText2.insert(END, datasetData["hostInfo"])
+            docMetaText2.insert(END, datasetData["backupData"])
 
 
             contact_data = parse_contact(ma_dmp)

@@ -35,14 +35,19 @@ def parse_dataset(ma_dmp):
     result = {}
     result["versioning"] = ""
     identifiers = ""
+    hostInfo = ""
     generalDescription = ""
     metaIdentifiers = ""
     FAIRDataset = ""
+    metaInfo = ""
+    DataQuality = ""
+    backupData = ""
 
     for dataset in datasets:
+        DataQuality = DataQuality + dataset.get("data_quality_assurance")
         dataset_ids = dataset.get("dataset_id", [])
         datasetTitle = dataset["title"]
-        keywords = dataset.get("keywords", [])
+        keywords = dataset.get("keyword", [])
         datasetLanguage = dataset.get("language", "")
         datasetLanguage = "english" if datasetLanguage == "en" else datasetLanguage
         description = dataset.get("description", "")
@@ -54,16 +59,22 @@ def parse_dataset(ma_dmp):
 
         FAIRDataset = identifiers
         if datasetLanguage != "":
-            FAIRDataset = FAIRDataset + "The dataset is in " + datasetLanguage + "."
-        if keywords != "":
-            FAIRDataset = FAIRDataset + "It can be found using the following keywords: " + ",".join([str(x) for x in keywords])
+            FAIRDataset = FAIRDataset + "The dataset is in " + datasetLanguage + ". "
+        if keywords:
+            FAIRDataset = FAIRDataset + "It can be found using the following keywords: " + (", ".join(['"' + str(x) + '"' for x in keywords]) + ".\n")
 
         metadatas = dataset.get("metadata", [])
         for metadata in metadatas:
             metaDescrip = metadata.get("description", "")
             metaLang = metadata["language"]
+            metaLang = "English" if metaLang == "en" else metaLang
             metaId = metadata["metadata_id"]["metadata_id"]
             metaIdType = metadata["metadata_id"]["metadata_id_type"]
+
+            if metaLang != "":
+                metaInfo = metaInfo + "The metadata is in " + metaLang + ". "
+            if metaInfo != "":
+                metaInfo = metaInfo + "The metadata " + metaDescrip + " "
 
             metaIdentifiers = metaIdentifiers + "The dataset " + datasetTitle + " uses the following standard (referenced by " + metaIdType + ") " + metaId + ".\n"
 
@@ -84,16 +95,39 @@ def parse_dataset(ma_dmp):
 
             host = distribution.get("host", None)
             if not(host is None):
+                backup__frequency = host.get("backup__frequency", "")
+                backup_type = host.get("backup_type", "")
+
+                if backup__frequency != "" and backup_type != "":
+                    backupData = backupData + "The data is backed up " + backup__frequency + " on " + backup_type + ".\n"
+                if backup__frequency == "" and backup_type != "":
+                    backupData = backupData + "The data is backed up on " + backup_type + ".\n"
+                if backup__frequency != "" and backup_type == "":
+                    backupData = backupData + "The data is backed up " + backup__frequency + ".\n"
+
                 hostDescription = host.get("description", "")
                 hostDescriptionB = "(" + hostDescription + ") "
                 support_versioning = host.get("support_versioning", "")
                 if support_versioning == "yes":
                     result["versioning"] = result["versioning"] + "The selected repository " + hostDescriptionB + "provides versioning.\n"
 
+                hostCertificate = host.get("certified_with", "")
+                hostPids = host.get("pid_system", [])
+                hostInfo = hostInfo + result["versioning"]
+                for hostPid in hostPids:
+                    hostInfo = hostInfo + "The host can be identified with " + hostPid + ". "
+
+                if hostCertificate != "":
+                    hostInfo = hostInfo + "Furthermore the host is certified with " + hostCertificate + ".\n"
+
         generalDescription = generalDescription + "\n"
 
+    result["backupData"] = backupData
+    result["DataQuality"] = DataQuality + "\n"
     result["FAIRDataset"] = FAIRDataset
     result["metaIdentifiers"] = metaIdentifiers
+    result["metaInfo"] = metaInfo
+    result["hostInfo"] = hostInfo
     result["generalDescription"] = generalDescription
     result["identifiers"] = identifiers
 
