@@ -1,4 +1,4 @@
-# Comparison of original DMPs with the generated ones
+# Comparison of original DMPs with the generated DMPs
 
 
 
