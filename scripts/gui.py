@@ -4,6 +4,8 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import *
 
+from scripts.parsingMethods import *
+
 import json
 import jinja2
 import pdfkit
@@ -185,23 +187,21 @@ def fillInTemplate(event=None):
         print("Processing JSON :))")
         # TODO this is just one use case !!
         if selectedTemplate == "FWF":
-            def get_contact(ma_dmp):
-                return ma_dmp["dmp"]["contact"]["name"], \
-                       ma_dmp["dmp"]["contact"]["mail"], \
-                       ma_dmp["dmp"]["contact"]["contact_id"]["contact_id"], \
-                       ma_dmp["dmp"]["contact"]["contact_id"]["contact_id_type"]
-
-            def parse_contact(ma_dmp):
-                name, mail, id, type = get_contact(ma_dmp)
-                return "The contact person of the project is " + name + ". They can be reached on the mail " \
-                       + mail + ". Their " + type + " is " + id + "."
-
             with open(file_name, 'r') as f:
                 ma_dmp = json.load(f)
+
+            datasetData = parse_dataset(ma_dmp)
+            dataDescriptionText1.delete("1.0", END)
+            dataDescriptionText1.insert(END, datasetData["generalDescription"])
+            dataDescriptionText1.insert(END, datasetData["versioning"])
+
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)
 
+            cost_data = parse_cost(ma_dmp)
+            dataSharingText2.delete("1.0", END)
+            dataSharingText2.insert(END, cost_data)
 
 
 
