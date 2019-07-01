@@ -36,12 +36,14 @@ def parse_dataset(ma_dmp):
     result["versioning"] = ""
     identifiers = ""
     hostInfo = ""
+    hostInfoExtended = ""
     generalDescription = ""
     metaIdentifiers = ""
     FAIRDataset = ""
     metaInfo = ""
     DataQuality = ""
     backupData = ""
+    licenseInfo = ""
 
     for dataset in datasets:
         DataQuality = DataQuality + dataset.get("data_quality_assurance")
@@ -79,6 +81,14 @@ def parse_dataset(ma_dmp):
             metaIdentifiers = metaIdentifiers + "The dataset " + datasetTitle + " uses the following standard (referenced by " + metaIdType + ") " + metaId + ".\n"
 
         for distribution in distributions:
+            licenses = distribution.get("license", "")
+            for license in licenses:
+                if license != "":
+                    license_ref = license["license_ref"]
+                    start_date = license["start_date"]
+
+                    licenseInfo = licenseInfo + "The dataset is licensed under " + license_ref + " starting at " + start_date + ".\n"
+
             distributionTitle = distribution["title"]
             format = distribution.get("format", "")
             byte_size = distribution.get("byte_size", "")
@@ -97,6 +107,7 @@ def parse_dataset(ma_dmp):
             if not(host is None):
                 backup__frequency = host.get("backup__frequency", "")
                 backup_type = host.get("backup_type", "")
+                geo_location = host.get("geo_location", "")
 
                 if backup__frequency != "" and backup_type != "":
                     backupData = backupData + "The data is backed up " + backup__frequency + " on " + backup_type + ".\n"
@@ -120,6 +131,9 @@ def parse_dataset(ma_dmp):
                 if hostCertificate != "":
                     hostInfo = hostInfo + "Furthermore the host is certified with " + hostCertificate + ".\n"
 
+                if geo_location != "":
+                    hostInfoExtended = hostInfo + "The host can is located in " + geo_location + ".\n"
+
         generalDescription = generalDescription + "\n"
 
     result["backupData"] = backupData
@@ -128,7 +142,9 @@ def parse_dataset(ma_dmp):
     result["metaIdentifiers"] = metaIdentifiers
     result["metaInfo"] = metaInfo
     result["hostInfo"] = hostInfo
+    result["hostInfoExtended"] = hostInfoExtended
     result["generalDescription"] = generalDescription
     result["identifiers"] = identifiers
+    result["licenseInfo"] = licenseInfo
 
     return result

@@ -205,6 +205,13 @@ def fillInTemplate(event=None):
             docMetaText2.insert(END, datasetData["hostInfo"])
             docMetaText2.insert(END, datasetData["backupData"])
 
+            docMetaText3.delete("1.0", END)
+            docMetaText3.insert(END, datasetData["DataQuality"])
+
+            dataSharingText1.delete("1.0", END)
+            dataSharingText1.insert(END, datasetData["identifiers"])
+            dataSharingText1.insert(END, datasetData["hostInfoExtended"])
+            dataSharingText1.insert(END, datasetData["licenseInfo"])
 
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
