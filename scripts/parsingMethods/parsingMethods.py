@@ -45,8 +45,13 @@ def parse_dataset(ma_dmp):
     backupData = ""
     licenseInfo = ""
     accessInfo = ""
+    data_available_till = ""
+    securityInfo = ""
+    preservation = ""
+    personalAndSensitiveInfo = ""
 
     for dataset in datasets:
+        preservation = preservation + dataset.get("preservation_statement", "") + "\n"
         DataQuality = DataQuality + dataset.get("data_quality_assurance")
         dataset_ids = dataset.get("dataset_id", [])
         datasetTitle = dataset["title"]
@@ -56,6 +61,27 @@ def parse_dataset(ma_dmp):
         description = dataset.get("description", "")
         distributions = dataset.get("distribution", []) # can be zero!
         generalDescription = generalDescription + "Dataset - " + datasetTitle + ": " + description + "\n"
+
+        security_and_privacies = dataset.get("security_and_privacy", [])
+        personal_data = dataset["personal_data"]
+        sensitive_data = dataset["sensitive_data"]
+
+        if personal_data == "yes":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "The dataset contains personal data.\n"
+        if personal_data == "no":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "The dataset does not contain personal data.\n"
+        if personal_data == "unknown":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "It is not specified if the dataset contains personal data.\n"
+        if sensitive_data == "yes":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "The dataset contains sensitive data.\n"
+        if sensitive_data == "no":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "The dataset does not contain sensitive data.\n"
+        if sensitive_data == "unknown":
+            personalAndSensitiveInfo = personalAndSensitiveInfo + "It is not specified if the dataset contains sensitive data.\n"
+
+
+        for security_and_privacy in security_and_privacies:
+            securityInfo = securityInfo + security_and_privacy["title"] + ":\n" + security_and_privacy["description"]
 
         for dataset_id in dataset_ids:
             identifiers = identifiers + "The dataset " + datasetTitle + " can be identified using " + dataset_id["dataset_id"] + ", which is an " + dataset_id["dataset_id_type"] + ".\n"
@@ -92,6 +118,7 @@ def parse_dataset(ma_dmp):
             if data_access != "":
                 accessInfo = accessInfo + "The data will be available as " + data_access + " data. "
             if available_till != "":
+                data_available_till = data_available_till + "The dataset will be available until " + available_till + "."
                 accessInfo = accessInfo + "The dataset will be available until " + available_till + ". "
             if download_url != "":
                 accessInfo = accessInfo + "One can download the data from " + download_url + ".\n"
@@ -151,6 +178,7 @@ def parse_dataset(ma_dmp):
 
         generalDescription = generalDescription + "\n"
 
+    result["data_available_till"] = data_available_till + "\n"
     result["backupData"] = backupData
     result["DataQuality"] = DataQuality + "\n"
     result["FAIRDataset"] = FAIRDataset
@@ -162,5 +190,11 @@ def parse_dataset(ma_dmp):
     result["identifiers"] = identifiers
     result["licenseInfo"] = licenseInfo
     result["accessInfo"] = accessInfo
+    result["preservation"] = preservation
+    result["securityInfo"] = securityInfo
+    result["personalAndSensitiveInfo"] = personalAndSensitiveInfo
 
     return result
+
+def parseEthics():
+    pass

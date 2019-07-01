@@ -190,6 +190,7 @@ def fillInTemplate(event=None):
             with open(file_name, 'r') as f:
                 ma_dmp = json.load(f)
 
+            cost_data = parse_cost(ma_dmp)
             datasetData = parse_dataset(ma_dmp)
             dataDescriptionText1.delete("1.0", END)
             dataDescriptionText1.insert(END, datasetData["generalDescription"])
@@ -214,14 +215,23 @@ def fillInTemplate(event=None):
             dataSharingText1.insert(END, datasetData["licenseInfo"])
             dataSharingText1.insert(END, datasetData["accessInfo"])
 
+            dataSharingText2.delete("1.0", END)
+            dataSharingText2.insert(END, datasetData["hostInfoExtended"])
+            dataSharingText2.insert(END, datasetData["data_available_till"])
+            dataSharingText2.insert(END, datasetData["backupData"])
+            dataSharingText2.insert(END, datasetData["preservation"])
+            dataSharingText2.insert(END, cost_data)
+
+            ethicalText1.delete("1.0", END)
+            ethicalText1.insert(END, datasetData["licenseInfo"])
+            ethicalText1.insert(END, datasetData["securityInfo"])
+
+            ethicalText2.delete("1.0", END)
+            ethicalText2.insert(END, datasetData["personalAndSensitiveInfo"])
+
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)
-
-            cost_data = parse_cost(ma_dmp)
-            dataSharingText2.delete("1.0", END)
-            dataSharingText2.insert(END, cost_data)
-
 
 
 def resetTemplate(event=None):
