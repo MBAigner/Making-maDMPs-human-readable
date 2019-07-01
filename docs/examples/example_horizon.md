@@ -27,15 +27,15 @@ fully in the GUI.
 The elements of the Horizon 2020 template that are editable are:
 
 * Abstract (containing title, creator, ...)
-* 1. Data Summary
+* 1 Data Summary
 * 2.1 Making data findable, including provisions for metadata [FAIR data] 
 * 2.2 Making data openly accessible [FAIR data] 
 * 2.3 Making data interoperable [FAIR data] 
 * 2.4 Increase data re-use (through clarifying licenses) [FAIR data] 
-* 3. Allocation of resources 
-* 4. Data security 
-* 5. Ethical aspects 
-* 6. Other 
+* 3 Allocation of resources 
+* 4 Data security 
+* 5 Ethical aspects 
+* 6 Other 
 
 In the first place, those values are filled out using just the sub-questions provided by Horizon 2020. Those sub-questions will be filled out by the conversion of an maDMP. However, using this form of the template, the user is still free to
 remove or add certain questions that are not answered. This enables the possibility for a user to use this tool also simply for the creation of a DMP.
