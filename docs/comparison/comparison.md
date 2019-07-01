@@ -1,13 +1,32 @@
 # Comparison of original DMPs with the generated ones
 
-## a. How do they differ?
+We want to divide our comparison of the differences of the orginal DMPs and our translated ones into two sections, one for each template - Horizon 2020 and FWF - we treated in our work.
+
+## 1. FWF
+
+### 1.a. How do they differ?
 TODO
 
-## b. What information got lost?
+### 1.b. What information got lost?
 TODO
 
-## c. Which information is more detailed?
+### 1.c. Which information is more detailed?
 TODO
 
-## d. Which parts of the maDMP were easy/hard to generate?
+### 1.d. Which parts of the maDMP were easy/hard to generate?
+TODO
+
+
+## 2. FWF
+
+### 2.a. How do they differ?
+TODO
+
+### 2.b. What information got lost?
+TODO
+
+### 2.c. Which information is more detailed?
+TODO
+
+### 2.d. Which parts of the maDMP were easy/hard to generate?
 TODO
