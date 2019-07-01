@@ -10,13 +10,13 @@
 * Last modified: -> dmp/modified
 
 **Title of the DMP**
-* Dmp/title - Detailed DMP 
+* dmp/title - Detailed DMP 
 
 **1. Data summary**
 * State the purpose of the data collection/generation 
-    *	dmp/ project
+    *	dmp/project
 * Explain the relation to the objectives of the project 
-    *	dmp/ project
+    *	dmp/project
 * Specify the types and formats of data generated/collected 
     *	dataset/type
     *	dmp/dataset/distribution/format
@@ -32,35 +32,35 @@
 **2.1 Making data findable, including provisions for metadata [FAIR data]**
 * Outline the discoverability of data (metadata provision) 
     * Metadata used metdata/metadata_id/metadata_id + Dataset/ metdata/metadata_id/metadata_id_type
-    * Metdata/language + metadata/description
+    * metdata/language + metadata/description
 
 * Outline the identifiability of data and refer to standard identification mechanism. Do you make use of persistent and unique identifiers such as Digital Object Identifiers?
   * contact/contact_id/contact_id_type
-  * staff_id/ staff_id_type
+  * staff_id/staff_id_type
   * dmp_id/dmp_id_type
   * pid_system
   * meta_data/meta_data_id/meta_data_id_type
   * resource_id/technical_reosurce_id_type
   * funding/funder_id/funder_id_type
-  * funding/ grant_id/grant_id_type
+  * funding/grant_id/grant_id_type
 
 * Outline naming conventions used 
-    *	Dataset/ data_quality_assurance
+    *	dataset/data_quality_assurance
 
 * Outline the approach towards search keyword 
-    *	Dataset/ keyword
+    *	dataset/keyword
 
 * Outline the approach for clear versioning 
-    *	Dataset/host/support_versioning + dataset/host/ description (other versioning techniques need to be filled out by hand)
+    *	dataset/host/support_versioning + dataset/host/description (other versioning techniques need to be filled out by hand)
 
 * Specify standards for metadata creation (if any). If there are no standards in your discipline describe what metadata will be created and how 
-     * Dataset/metadata/*
-     * especially Dataset/metadata/metadata_id (e.g. Dublin core), dataset/metadata/language and dataset/metadata/description
+     * dataset/metadata/*
+     * especially dataset/metadata/metadata_id (e.g. Dublin core), dataset/metadata/language and dataset/metadata/description
 
 **2.2 Making data openly accessible [FAIR data]**
 
 * Specify which data will be made openly available? If some data is kept closed provide rationale for doing so 
-  *	dataset/ preservation_statement
+  * dataset/preservation_statement
   * dataset/sensitive_data
   * dataset/personal_data
   * dataset/security_and_privacy
@@ -78,14 +78,14 @@
 
 * Specify where the data and associated metadata, documentation and code are deposited
   * Used Attributes:
-  *	dataset/distribution/ access_url
-  * dataset/distribution/ download_url
-  *	dataset/metadata/metadata_id
-  *	dataset/host/pid_system
-  *	Documentation not specified in maDMP
+  * dataset/distribution/access_url
+  * dataset/distribution/download_url
+  * dataset/metadata/metadata_id
+  * dataset/host/pid_system
+  * Documentation not specified in maDMP
 
 * Specify how access will be provided in case there are any restrictions 
-    *	Dataset/security_and_privacy
+    *	dataset/security_and_privacy
     * Access in that case is not specified explicitly
 
 **2.3 Making data interoperable [FAIR data]**
@@ -107,8 +107,8 @@
     *	dataset/distribution/license/start_date (embargo if date is in the future, however reason unknown)
 
 * Specify whether the data produced and/or used in the project is useable by third parties, in particular after the end of the project?If the re-use of some data is restricted, explain why 
-  *	Dataset/distribution/licence
-  *	Dataset/Security_and_privacy
+  *	dataset/distribution/licence
+  *	dataset/Security_and_privacy
   *	Third party use is not specified in maDMP!
   *	Why is not explained by maDmp
   
@@ -121,18 +121,18 @@
 **3. Allocation of resources**
 
 * Estimate the costs for making your data FAIR. Describe how you intend to cover these costs 
-  *	Dataset/cost/currency_code 
-  *	Dataset/cost/description
-  *	Dataset/cost/title
-  *	Dataset/cost/value
+  *	dataset/cost/currency_code 
+  *	dataset/cost/description
+  *	dataset/cost/title
+  *	dataset/cost/value
   *	These describe the total cost. We have no separation between costs to make the data fair and long term preservation (see below)
 
 * Clearly identify responsibilities for data management in your project 
-  *	dm_staff/ contributor_type (where contributer type is related to data management, e.g. data manager or all types)
-  *	dm_staff/ mbox
-  *	dm_staff/ name
-  *	dm_staff/ staff_id/staff_id
-  *	dm_staff/ staff_id/staff_id_type
+  *	dm_staff/contributor_type (where contributer type is related to data management, e.g. data manager or all types)
+  *	dm_staff/mbox
+  *	dm_staff/name
+  *	dm_staff/staff_id/staff_id
+  *	dm_staff/staff_id/staff_id_type
 
 * Describe costs and potential value of long term preservation 
     *	Costs: for long term preservation hard to find (e.g. title through "long term preservation"?), because this is not a general term for such costs found in every maDMP, we have not included this attribute.
