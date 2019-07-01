@@ -34,7 +34,8 @@
 			"dmp_id_type": "HTTP-DOI"
 		},
 		"dataset": [{
-			"data_quality_assurance": 			"dataset_id": {
+				"data_quality_assurance": "File naming conventions (separation by underscores) were used. Furthermore a GitHub repository was used for data versioning. Also metadata was provided for this dataset, since it was internally generated.",
+				"dataset_id": {
 				"dataset_id": "10.5281/zenodo.2648703",
 				"dataset_id_type": "HTTP-DOI"
 			},
