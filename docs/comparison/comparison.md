@@ -1,43 +1,48 @@
 # Comparison of original DMPs with the generated ones
 
+
+
+
+### a. How do they differ?
+TODO
+
+## b. What information got lost?
+
 We want to divide our comparison of the differences of the orginal DMPs and our translated ones into two sections, one for each template - Horizon 2020 and FWF - we treated in our work.
 
-## 1. FWF
-
-### 1.a. How do they differ?
-TODO
-
-### 1.b. What information got lost?
+### b.1. FWF
 
 We have not been able to include the following information of our original DMPs:
 
-*
-*
+* What kinds of data/source code will be generated or reused (type, format, volume)? The information which data was reused could not be reassembled with the maDMP.
+* How are you planning to document this information?
+* How will the consistency and quality of data collection be controlled and documented?
+* Are there any technical barriers to making the research data fully or partially accessible?
+* If applicable, how are you planning to deal with sensitive data during and after the project? Before and after the project is not specified
+* No data will be generated or analysed. This is not answered by the maDMP.
 
-### 1.c. Which information is more detailed?
-TODO
-
-### 1.d. Which parts of the maDMP were easy/hard to generate?
-TODO
-
-
-## 2. Horizon 2020
-
-### 2.a. How do they differ?
-TODO
-
-### 2.b. What information got lost?
+### b.2. Horizon 2020
 
 We have not been able to include the following information of our original DMPs:
 
-*
-*
+* Specify if existing data is being re-used (if any)?
+* Outline the data utility: to whom will it be useful? 
+* Specify what methods or software tools are needed to access the data? Is documentation about the software needed to access the data included? Is it possible to include the relevant software (e.g. in open source code)? 
+* Specify whether you will be using standard vocabulary for all data types present in your data set, to allow inter-disciplinary interoperability? If not, will you provide mapping to more commonly used ontologies? 
 
-### 2.c. Which information is more detailed?
+For those questions, no information is provided in the maDMPs.
+
+* Specify whether the data produced and/or used in the project is useable by third parties, in particular after the end of the project? If the re-use of some data is restricted, explain why? The information, except the third party use is specified in maDMP.
+* Describe costs and potential value of long term preservation. The value of long term preservation was hard to find in the maDMP.
+* Also, recovery and explicitly secure storage and transfer of data not defined in maDMP.
+
+
+## c. Which information is more detailed?
 TODO
 
-### 2.d. Which parts of the maDMP were easy/hard to generate?
+## d. Which parts of the maDMP were easy/hard to generate?
 TODO
+
 
 
 ## Solutions according the problems
