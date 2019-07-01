@@ -62,6 +62,7 @@ ethicalText2 = None
 generatedDataText = None
 
 # Horizon
+title = None
 abstractLabel = None
 dataDescriptionLabel1 = None
 fairLabel1 = None
@@ -561,28 +562,29 @@ def create_html(template, output):
     real_template = templateEnv.get_template(TEMPLATE_FILE)
 
     if template == "FWF":
-        outputText = real_template.render(data_officer=dataOfficerText.get(1.0,END),
-                                          data_characteristics=dataDescriptionText1.get(1.0,END),
-                                          meta_standards=docMetaText1.get(1.0,END),
-                                          data_documentation=docMetaText2.get(1.0,END),
-                                          data_quality=docMetaText3.get(1.0,END),
-                                          data_sharing=dataSharingText1.get(1.0,END),
-                                          data_storage=dataSharingText2.get(1.0,END),
-                                          legal=ethicalText1.get(1.0,END),
-                                          ethical=ethicalText2.get(1.0,END),
-                                          generation=generatedDataText.get(1.0,END))
+        outputText = real_template.render(data_officer=dataOfficerText.get(1.0,END).replace("\n", "<p />"),
+                                          data_characteristics=dataDescriptionText1.get(1.0,END).replace("\n", "<p />"),
+                                          meta_standards=docMetaText1.get(1.0,END).replace("\n", "<p />"),
+                                          data_documentation=docMetaText2.get(1.0,END).replace("\n", "<p />"),
+                                          data_quality=docMetaText3.get(1.0,END).replace("\n", "<p />"),
+                                          data_sharing=dataSharingText1.get(1.0,END).replace("\n", "<p />"),
+                                          data_storage=dataSharingText2.get(1.0,END).replace("\n", "<p />"),
+                                          legal=ethicalText1.get(1.0,END).replace("\n", "<p />"),
+                                          ethical=ethicalText2.get(1.0,END).replace("\n", "<p />"),
+                                          generation=generatedDataText.get(1.0,END).replace("\n", "<p />"))
     else:
         # TODO think about how to extend DMP with title!
-        outputText = real_template.render(abstract=abstractText.get(1.0,END),
-                                          data_summary=dataDescriptionText1.get(1.0,END),
-                                          fair_findable=fairText1.get(1.0,END),
-                                          fair_accessible=fairText2.get(1.0,END),
-                                          fair_interoperable=fairText3.get(1.0,END),
-                                          fair_reuse=fairText4.get(1.0,END),
-                                          resource=resourceText.get(1.0,END),
-                                          security=securityText.get(1.0,END),
-                                          ethical=ethicalText.get(1.0,END),
-                                          other=otherText.get(1.0,END))
+        outputText = real_template.render(title=title,
+                                          abstract=abstractText.get(1.0,END).replace("\n", "<p />"),
+                                          data_summary=dataDescriptionText1.get(1.0,END).replace("\n", "<p />"),
+                                          fair_findable=fairText1.get(1.0,END).replace("\n", "<p />"),
+                                          fair_accessible=fairText2.get(1.0,END).replace("\n", "<p />"),
+                                          fair_interoperable=fairText3.get(1.0,END).replace("\n", "<p />"),
+                                          fair_reuse=fairText4.get(1.0,END).replace("\n", "<p />"),
+                                          resource=resourceText.get(1.0,END).replace("\n", "<p />"),
+                                          security=securityText.get(1.0,END).replace("\n", "<p />"),
+                                          ethical=ethicalText.get(1.0,END).replace("\n", "<p />"),
+                                          other=otherText.get(1.0,END).replace("\n", "<p />"))
 
     html_file = open(output + ".html", "w")
     html_file.write(outputText)
