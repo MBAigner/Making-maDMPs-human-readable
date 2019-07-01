@@ -42,8 +42,8 @@ We include the following information for the according characteristics:
     * distribution/host/backup_type
 
 Is the data machine-readable? 
-*	**Interoperable**
-   * We look if dataset/distribution/format is machine readable
+* **Interoperable**
+    * We look if dataset/distribution/format is machine readable
 
 How are you planning to document this information?
 *	This is not answered by the madDMP
