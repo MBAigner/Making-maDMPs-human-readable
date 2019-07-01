@@ -8,7 +8,11 @@ We want to divide our comparison of the differences of the orginal DMPs and our 
 TODO
 
 ### 1.b. What information got lost?
-TODO
+
+We have not been able to include the following information of our original DMPs:
+
+*
+*
 
 ### 1.c. Which information is more detailed?
 TODO
@@ -17,16 +21,25 @@ TODO
 TODO
 
 
-## 2. FWF
+## 2. Horizon 2020
 
 ### 2.a. How do they differ?
 TODO
 
 ### 2.b. What information got lost?
-TODO
+
+We have not been able to include the following information of our original DMPs:
+
+*
+*
 
 ### 2.c. Which information is more detailed?
 TODO
 
 ### 2.d. Which parts of the maDMP were easy/hard to generate?
 TODO
+
+
+## Solutions according the problems
+
+We implemented the possibility for a user of our tool to manually adjust the resulting human-readable DMP. Thus, formulations can be changed, and missing information can be still added by hand.
