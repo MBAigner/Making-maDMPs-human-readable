@@ -44,6 +44,7 @@ def parse_dataset(ma_dmp):
     DataQuality = ""
     backupData = ""
     licenseInfo = ""
+    accessInfo = ""
 
     for dataset in datasets:
         DataQuality = DataQuality + dataset.get("data_quality_assurance")
@@ -81,6 +82,20 @@ def parse_dataset(ma_dmp):
             metaIdentifiers = metaIdentifiers + "The dataset " + datasetTitle + " uses the following standard (referenced by " + metaIdType + ") " + metaId + ".\n"
 
         for distribution in distributions:
+            access_url = distribution.get("access_url", "")
+            available_till = distribution.get("available_till", "")
+            data_access = distribution.get("data_access", "")
+            download_url = distribution.get("download_url", "")
+
+            if access_url != "":
+                accessInfo = accessInfo + "One can access the data through " + access_url + ". "
+            if data_access != "":
+                accessInfo = accessInfo + "The data will be available as " + data_access + " data. "
+            if available_till != "":
+                accessInfo = accessInfo + "The dataset will be available until " + available_till + ". "
+            if download_url != "":
+                accessInfo = accessInfo + "One can download the data from " + download_url + ".\n"
+
             licenses = distribution.get("license", "")
             for license in licenses:
                 if license != "":
@@ -146,5 +161,6 @@ def parse_dataset(ma_dmp):
     result["generalDescription"] = generalDescription
     result["identifiers"] = identifiers
     result["licenseInfo"] = licenseInfo
+    result["accessInfo"] = accessInfo
 
     return result

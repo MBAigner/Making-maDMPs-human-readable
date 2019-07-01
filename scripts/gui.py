@@ -212,6 +212,7 @@ def fillInTemplate(event=None):
             dataSharingText1.insert(END, datasetData["identifiers"])
             dataSharingText1.insert(END, datasetData["hostInfoExtended"])
             dataSharingText1.insert(END, datasetData["licenseInfo"])
+            dataSharingText1.insert(END, datasetData["accessInfo"])
 
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
