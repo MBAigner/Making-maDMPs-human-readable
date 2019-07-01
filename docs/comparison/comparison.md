@@ -57,7 +57,7 @@ In general, the loss of information was bigger through the conversion than the a
 
 ## d. Which parts of the maDMP were easy/hard to generate?
 
-Some parts of the template, like the Creator for Horizon 2020 or Data Officer for FWF have been easiest to extract from the maDMP. 
+Some parts of the template, like the Title, Creator for Horizon 2020 or Data Officer for FWF have been easiest to extract from the maDMP. 
 
 A big problem was the dataset attributes, because it contains a big amount of data, especially bigger arrays appearing in the JSON what made it a real challenge and a lot of work was necessary to fit the whole information into our human-readable DMPs.
 
