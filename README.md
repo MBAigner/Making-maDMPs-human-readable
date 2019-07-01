@@ -29,14 +29,18 @@ Some more detailed examples about how to use our tool can be found [here](https:
 
 The main file of our tool can be found in the directory  ```scripts```. In the following, we will show up needed software and libraries for the execution of our tool.
 
-### Needed libraries and pre-installed software
+### Needed libraries 
 
 * ```python``` version 3.6
 * ```tkinter``` version 8.6
 * ```jinja2``` version 2.10.1
 * ```pdfkit``` version 0.6.1
 
-Also, the software  ```wkhtmltopdf ``` needs to be installed, for the creation of pdf documents. Guides how to install this on a certain operating system can be found [here](https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf/). We used version 0.12.4 for our project.
+### Pre-installed software
+
+The software  ```wkhtmltopdf``` needs to be installed for the creation of pdf documents, since it is used by the ```pdfkit``` library.
+
+Guides how to install this on a certain operating system can be found [here](https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf/). We used version 0.12.4 for our project.
 
 ## How-to
 
