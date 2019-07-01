@@ -227,8 +227,10 @@ def fillInTemplate(event=None):
             ethicalText1.insert(END, datasetData["licenseInfo"])
             ethicalText1.insert(END, datasetData["securityInfo"])
 
+            ethics = parseEthics(ma_dmp)
             ethicalText2.delete("1.0", END)
             ethicalText2.insert(END, datasetData["personalAndSensitiveInfo"])
+            ethicalText2.insert(END, ethics)
 
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)

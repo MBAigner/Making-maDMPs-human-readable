@@ -196,5 +196,24 @@ def parse_dataset(ma_dmp):
 
     return result
 
-def parseEthics():
-    pass
+def parseEthics(ma_dmp):
+    result = ""
+
+    ethical_issues_exist = ma_dmp["dmp"]["ethical_issues_exist"]
+    ethical_issues_description = ma_dmp["dmp"].get("ethical_issues_description", "")
+    ethical_issues_report = ma_dmp["dmp"].get("ethical_issues_report", "")
+
+    if ethical_issues_exist == "yes":
+        result = result + "There are ethical issues in the project to be considered."
+    if ethical_issues_exist == "no":
+        result = result + "There are no ethical issues in the project to be considered."
+    if ethical_issues_exist == "unknown":
+        result = result + "It is unknown if there are ethical issues in the project."
+
+    if ethical_issues_description != "":
+        result = result + ethical_issues_description
+
+    if ethical_issues_report != "":
+        result = result + "A further investigation of ethical issues can be found at " + ethical_issues_report + "."
+
+    return result
