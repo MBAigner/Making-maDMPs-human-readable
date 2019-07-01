@@ -93,6 +93,7 @@ def chooseMaDMP(event=None):
                                            filetypes = (("JSON files","*.json"),("all files","*.*")))
     if DEBUG:
         print('Selected:', file_name)
+    fileEntry.delete(0, END)
     fileEntry.insert(0, file_name)
 
 
