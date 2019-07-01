@@ -247,6 +247,27 @@ def fillInTemplate(event=None):
             abstractText.delete("1.0", END)
             abstractText.insert(END, parse_abstract(ma_dmp))
 
+            project_data = parse_project(ma_dmp)
+
+            dataDescriptionText1.delete("1.0", END)
+            datasetData = parse_dataset(ma_dmp)
+            dataDescriptionText1.insert(END, project_data["description"])
+            dataDescriptionText1.insert(END, datasetData["generalDescription"])
+
+            contact_data = parse_contact(ma_dmp)
+            staff_data = parse_staff(ma_dmp)
+            fairText1.delete("1.0", END)
+            fairText1.insert(END, datasetData["metaIdentifiers"])
+            fairText1.insert(END, datasetData["metaInfo"])
+            fairText1.insert(END, contact_data)
+            fairText1.insert(END, datasetData["DataQuality"])
+            fairText1.insert(END, datasetData["FAIRDataset"])
+            fairText1.insert(END, datasetData["hostInfo"])
+            fairText1.insert(END, staff_data)
+            fairText1.insert(END, parseDMP(ma_dmp))
+            fairText1.insert(END, project_data["fundingAndResources"])
+
+
 
 def resetTemplate(event=None):
     """

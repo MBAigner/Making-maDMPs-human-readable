@@ -10,6 +10,51 @@ def parse_contact(ma_dmp):
     return "The contact person of the project is " + name + ". They can be reached on the mail " \
            + mail + ". Their " + type + " is " + id + "."
 
+def parse_staff(ma_dmp):
+    result = ""
+
+    staffs = ma_dmp["dmp"].get("dm_staff", [])
+
+    for staff in staffs:
+        contributor_type = staff["contributor_type"]
+        mbox = staff.get("mbox", "")
+        name = staff["name"]
+        staff_id = staff.get("staff_id", "")
+
+        if staff_id != "":
+            s_id = staff_id["staff_id"]
+            s_id_type = staff_id["staff_id_type"]
+            result = result + "The " + contributor_type + \
+                                 "(" + name + ", " + mbox + ")" + " is identified by " + s_id + "(" + s_id_type + ").\n"
+
+    return result
+
+def parse_project(ma_dmp):
+    result = {}
+    result["description"] = ""
+    result["fundingAndResources"] = ""
+
+    projects = ma_dmp["dmp"].get("project", [])
+
+    for project in projects:
+        end = project["end"]
+        start = project["start"]
+        title = project["title"]
+        funding = project.get("funding", "")
+        if funding != "":
+            result["fundingAndResources"] = result["fundingAndResources"] + "It will be funded by " + \
+                funding["funder_id"]["funder_id"] + " (" + funding["funder_id"]["funder_id_type"] + ").\n"
+
+        if funding["funding_status"] != "":
+            result["fundingAndResources"] = result["fundingAndResources"] + "The funding has been " + \
+                                            funding["funding_status"] + ". "
+
+        result["fundingAndResources"] = result["fundingAndResources"] + "The grant is identified by " + \
+            funding["grant_id"]["grant_id"] + " (" + funding["grant_id"]["grant_id_type"] + ").\n"
+
+        result["description"] = result["description"] + project.get("description", "") + "\n"
+    return result
+
 def parse_abstract(ma_dmp):
     title = ma_dmp["dmp"]["title"]
     last_modified = ma_dmp["dmp"]["modified"]
@@ -208,6 +253,9 @@ def parse_dataset(ma_dmp):
     result["personalAndSensitiveInfo"] = personalAndSensitiveInfo
 
     return result
+
+def parseDMP(ma_dmp):
+    return "The dmp is identified by " + ma_dmp["dmp"]["dmp_id"]["dmp_id"] + ".\n"
 
 def parseEthics(ma_dmp):
     result = ""
