@@ -102,17 +102,22 @@ def chooseTemplate(event=None):
     Update GUI according to template
     """
     global selectedTemplate
-    if selectedTemplate is not None: # clears GUI
-        destroyOldTemplate(templatesCombo.get())
 
-    selectedTemplate = templatesCombo.get()
-    if selectedTemplate == "FWF": # load FWF template
-        createFWFItems()
-        createModificationItems(11)
+    # Just modify if the template was changed
+    if templatesCombo.get() != selectedTemplate:
+        # Different template selected before
+        if selectedTemplate is not None:
+            # clears GUI
+            destroyOldTemplate(templatesCombo.get())
 
-    else: # load Horizon template
-        createHorizonItems()
-        createModificationItems(15)
+        selectedTemplate = templatesCombo.get()
+        if selectedTemplate == "FWF": # load FWF template
+            createFWFItems()
+            createModificationItems(11)
+
+        else: # load Horizon template
+            createHorizonItems()
+            createModificationItems(15)
 
 
 def destroyOldTemplate(new_template):
