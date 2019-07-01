@@ -8,7 +8,15 @@ Thats why we developed our tool, making maDMPs human-readable, enabling an easy 
 
 ## Description of our Solution
 
-TODO
+For the purpose of transforming machine-actionable DMPs into human-readable ones, we implemented a GUI application. Using our tool, one can 
+
+* upload a maDMP in form of a JSON file
+* select one of two supported templates (FWF or Horizon 2020)
+* let the tool automatically fill out fields for all questions provided in the templates
+* adapt automatically generated translation for a better fit to the users needs
+* save the resulting, human-readable DMP as HTML and/or PDF document
+
+Some more detailed examples about how to use our tool can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md)
 
 ## Folder Structure
 
