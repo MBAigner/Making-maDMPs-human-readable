@@ -116,7 +116,7 @@
     *	dataset/data_quality_assurance
 
 * Specify the length of time for which the data will remain re-usable 
-*   	dataset/distribution/available_till
+    *  dataset/distribution/available_till
 
 **3. Allocation of resources**
 
