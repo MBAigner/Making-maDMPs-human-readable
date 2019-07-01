@@ -22,6 +22,7 @@ Some more detailed examples about how to use our tool can be found [here](https:
 
 *  ```templates```: Contains template files that will be feeded with maDMP data when executing our tool.
 *  ```hrDMPs```: Here we saved some sample human-readable DMPs created with the tool.
+* ```docs```: Full documentation of our solution.
 *  ```maDMPs```: Contains our created maDMPs, used for the evaluation of our tool.
 *  ```scripts```: This folder consists of all code needed for the execution of the tool.
 
