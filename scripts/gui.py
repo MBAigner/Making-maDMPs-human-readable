@@ -12,6 +12,7 @@ import pdfkit
 import os
 
 DEBUG = True
+
 # TODO: Change this path to the correct location of wkhtmltopdf.exe !
 PATH_WKHTMLTOPDF = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
 
@@ -547,6 +548,7 @@ def create_html(template, output):
                                           data_sharing=dataSharingText1.get(1.0,END),
                                           data_storage=dataSharingText2.get(1.0,END),
                                           legal=ethicalText1.get(1.0,END),
+                                          ethical=ethicalText2.get(1.0,END),
                                           generation=generatedDataText.get(1.0,END))
     else:
         # TODO think about how to extend DMP with title!

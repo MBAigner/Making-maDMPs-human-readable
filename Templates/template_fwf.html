@@ -1,63 +1,116 @@
-<head></head>
+<head>
+	<style type="text/css">
+		.cls_010{
+			font-family:Arial,serif;font-size:18.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none
+		}
+		
+		.cls_002 {
+			font-family: Arial,serif;
+			font-size: 14.1px;
+			color: rgb(0,0,0);
+			font-weight: bold;
+			font-style: normal;
+			text-decoration: none;
+		}
+		
+		.cls_003 {
+			font-family: Arial,serif;
+			font-size: 14.1px;
+			color: rgb(255,255,255);
+			font-weight: bold;
+			font-style: normal;
+			text-decoration: none;
+			background-color: #0080FF;
+		}
+		
+		table {
+			border: 1px solid black;
+		}
+		
+		td {
+			border: 1px solid black;
+			padding-bottom: 7px;
+			padding-top: 7px;
+			padding-left: 5px;
+			padding-right: 5px;
+			
+		}
+	</style>
+</head>
 
 <body>
-	<p>Data Officer</p>
-	<p>
-	{{ data_officer }}
-	</p>
-	
-	<p>I Data Characteristics</p>
-	<p>
-	I.1 Description of the data
-	</p>
-	<p>
-	{{ data_characteristics }}
-	</p>
-	
-	
-<p>II Documentation and Metadata</p>
-<p>II.1 Metadata standards</p>
-<p>
-{{ meta_standards }}
-</p>
+	<p class = "cls_010">FWF Data Management Plan Template (DMP)</p>
 
-<p>II.2 Documentation of data</p>
-<p>
-{{ data_documentation }}
-</p>
-
-<p>II.3 Data quality control</p>
-<p>
-{{ data_quality }}</p>
-
-
-<p>III Data Availability and Storage</p>
-
-<p>III.1 Data sharing strategy</p>
-<p>
-{{ data_sharing }}
-</p>
-
-<p>III.2 Data storage strategy</p>
-<p>
-{{ data_storage }}
-</p>
-
-<p>IV Legal and Ethical Aspects</p>
-
-<p>IV.1 Legal aspects</p>
-<p>
-{{ legal }}
-</p>
-
-<p>IV.2 Ethical aspects</p>
-<p>
-{{ ethical }}
-</p>
-
-<p>No data will be generated or analysed</p>
-<p>
-{{ generation }}
-</p>
-
+	<table>
+		<tr>
+			<td></td>
+			<td class = "cls_002">Data Officer</td>
+			<td>{{ data_officer }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_003">I</td>
+			<td class = "cls_003">Data Characteristics</td>
+			<td class = "cls_003"></td>
+		</tr>
+		<tr>
+			<td class = "cls_002">I.1</td>
+			<td class = "cls_002">Description of the data</td>
+			<td>{{ data_characteristics }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_003">II</td>
+			<td class = "cls_003">Documentation and Metadata</td>
+			<td class = "cls_003"></td>
+		</tr>
+		<tr>
+			<td class = "cls_002">II.1</td>
+			<td class = "cls_002">Metadata standards</td>
+			<td>{{ meta_standards }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_002">II.2</td>
+			<td class = "cls_002">Documentation of data</td>
+			<td>{{ data_documentation }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_002">II.3</td>
+			<td class = "cls_002">Data quality control</td>
+			<td>{{ data_quality }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_003">III</td>
+			<td class = "cls_003">Data Availability and Storage</td>
+			<td class = "cls_003"></td>
+		</tr>
+		<tr>
+			<td class = "cls_002">III.1</td>
+			<td class = "cls_002">Data sharing strategy</td>
+			<td>{{ data_sharing }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_002">III.2</td>
+			<td class = "cls_002">Data storage strategy</td>
+			<td>{{ data_storage }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_003">IV</td>
+			<td class = "cls_003">Legal and Ethical Aspects</td>
+			<td class = "cls_003"></td>
+		</tr>
+		<tr>
+			<td class = "cls_002">IV.1</td>
+			<td class = "cls_002">Legal aspects</td>
+			<td>{{ legal }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_002">IV.2</td>
+			<td class = "cls_002">Ethical aspects</td>
+			<td>{{ ethical }}</td>
+		</tr>
+		<tr>
+			<td class = "cls_002"></td>
+			<td class = "cls_002">No data will be generated or analysed</td>
+			<td>{{ generation }}</td>
+		</tr>
+	</table>
 <body>
