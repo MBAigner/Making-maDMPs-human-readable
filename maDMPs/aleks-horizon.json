@@ -35,10 +35,10 @@
 		},
 		"dataset": [{
 				"data_quality_assurance": "File naming conventions (separation by underscores) were used. Furthermore a GitHub repository was used for data versioning. Also metadata was provided for this dataset, since it was internally generated.",
-				"dataset_id": {
+				"dataset_id": [{
 				"dataset_id": "10.5281/zenodo.2648703",
 				"dataset_id_type": "HTTP-DOI"
-			},
+			}],
 			"description": "Internally generated dataset, that was merge from two external datasets.",
 			"distribution": [{
 				"access_url": "https://zenodo.org/record/2648703#.XRkCdW5uLD4",
@@ -68,14 +68,14 @@
 			"issued": "2019-04-22",
 			"keyword": ["mean near surface temperature deviation", "number of live-births in Vienna"],
 			"language": "en",
-			"metadata": {
+			"metadata": [{
 				"description": "Provides an explanation of the columns of the dataset.",
 				"language": "en",
 				"metadata_id": {
 					"metadata_id": "http://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
 					"metadata_id_type": "URL"
 				}
-			},
+			}],
 			"personal_data": "no",
 			"preservation_statement": "Should be preserved for a maximum of about 2 to 5 years, as it will get very outdated and presumably of only little interest to the public afterwards.",
 			"security_and_privacy": [{

@@ -195,6 +195,13 @@ def fillInTemplate(event=None):
             dataDescriptionText1.insert(END, datasetData["generalDescription"])
             dataDescriptionText1.insert(END, datasetData["versioning"])
 
+            docMetaText1.delete("1.0", END)
+            docMetaText1.insert(END, datasetData["metaIdentifiers"])
+
+            docMetaText2.delete("1.0", END)
+            docMetaText2.insert(END, datasetData["FAIRDataset"])
+
+
             contact_data = parse_contact(ma_dmp)
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)

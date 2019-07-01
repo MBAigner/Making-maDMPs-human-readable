@@ -63,14 +63,14 @@
 			"issued": "",
 			"keyword": [],
 			"language": "",
-			"metadata": {
+			"metadata": [{
 				"description": "",
 				"language": "",
 				"metadata_id": {
 					"metadata_id": "",
 					"metadata_id_type": ""
 				}
-			},
+			}],
 			"personal_data": "",
 			"preservation_statement": "",
 			"security_and_privacy": [{

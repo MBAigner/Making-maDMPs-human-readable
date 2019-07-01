@@ -35,10 +35,10 @@
 		},
 		"dataset": [{
 			"data_quality_assurance": "The data will be stored as a comma-separated values (.csv) file. The format is chosen since it is a non-proprietary, open format for storing data. Also, the resulting file size is smaller than for e.g. XML-files. Figure data will be stored as JPEG files, to make it easier to work with them on different systems and also save disc space. The data collected contains meta data attached in the described origin of the resources.",
-			"dataset_id": {
+			"dataset_id": [{
 				"dataset_id": "https://doi.org/10.5281/zenodo.2648172",
 				"dataset_id_type": "HTTP-DOI"
-			},
+			}],
 			"description": "This output contains the combined data from the average temperature and per year from Inssbruck and the EU pollution index for NMVOCs of Austria. Each row contains comma-separated values (year;avg yearly temperature;pollution indicator for NMVOCs). The temperature is measured in Celsius degrees. The pollution indicator shows the value of the EU pollution index for NMVOCs (based on year 200, where indicator=100).",
 			"distribution": [{
 				"access_url": "https://zenodo.org/record/2648172#.XRorROgzZPY",
@@ -68,14 +68,14 @@
 			"issued": "2019-04-21",
 			"keyword": ["temperature in Innsbruck", "transport pollution emission indicator,"],
 			"language": "en",
-			"metadata": {
+			"metadata": [{
 				"description": "Meta data is stored under /documentation/metadata.xml and contains the following information: Title of the experiment, Creator, Subject, A more detailed description of the experiment, Date when the experiment was executed, Type/purpose of the application, Format,Sources used, Language, Years covered by the experiment dtaa, Rights for using the data / sourcecode (we provide free access here). As a standard for writing the meta data, the Dublin Core has been in use, since it is a basic, domain-agnostic standard which can be easily understood and implemented. The meta data as well as the description file is created by hand.",
 				"language": "en",
 				"metadata_id": {
 					"metadata_id": "http://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
 					"metadata_id_type": "URL"
 				}
-			},
+			}],
 			"personal_data": "no",
 			"preservation_statement": "The data will also be publically available in the GitHub repository for at least 5 years. Since the file sizes are small compared to other Data Science projects, noadditional charges for the data repository are expected.",
 			"security_and_privacy": [{

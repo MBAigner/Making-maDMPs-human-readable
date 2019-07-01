@@ -36,14 +36,37 @@ def parse_dataset(ma_dmp):
     result["versioning"] = ""
     identifiers = ""
     generalDescription = ""
+    metaIdentifiers = ""
+    FAIRDataset = ""
 
     for dataset in datasets:
         dataset_ids = dataset.get("dataset_id", [])
         datasetTitle = dataset["title"]
+        keywords = dataset.get("keywords", [])
+        datasetLanguage = dataset.get("language", "")
+        datasetLanguage = "english" if datasetLanguage == "en" else datasetLanguage
         description = dataset.get("description", "")
         distributions = dataset.get("distribution", []) # can be zero!
         generalDescription = generalDescription + "Dataset - " + datasetTitle + ": " + description + "\n"
-        identifiers = identifiers + "The dataset " + datasetTitle + " is identified using " + dataset_ids["dataset_id"] + ", which is an " + dataset_ids["dataset_id_type"] + ".\n"
+
+        for dataset_id in dataset_ids:
+            identifiers = identifiers + "The dataset " + datasetTitle + " can be identified using " + dataset_id["dataset_id"] + ", which is an " + dataset_id["dataset_id_type"] + ".\n"
+
+        FAIRDataset = identifiers
+        if datasetLanguage != "":
+            FAIRDataset = FAIRDataset + "The dataset is in " + datasetLanguage + "."
+        if keywords != "":
+            FAIRDataset = FAIRDataset + "It can be found using the following keywords: " + ",".join([str(x) for x in keywords])
+
+        metadatas = dataset.get("metadata", [])
+        for metadata in metadatas:
+            metaDescrip = metadata.get("description", "")
+            metaLang = metadata["language"]
+            metaId = metadata["metadata_id"]["metadata_id"]
+            metaIdType = metadata["metadata_id"]["metadata_id_type"]
+
+            metaIdentifiers = metaIdentifiers + "The dataset " + datasetTitle + " uses the following standard (referenced by " + metaIdType + ") " + metaId + ".\n"
+
         for distribution in distributions:
             distributionTitle = distribution["title"]
             format = distribution.get("format", "")
@@ -69,6 +92,8 @@ def parse_dataset(ma_dmp):
 
         generalDescription = generalDescription + "\n"
 
+    result["FAIRDataset"] = FAIRDataset
+    result["metaIdentifiers"] = metaIdentifiers
     result["generalDescription"] = generalDescription
     result["identifiers"] = identifiers
 
