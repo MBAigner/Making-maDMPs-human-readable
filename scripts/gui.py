@@ -12,7 +12,8 @@ import pdfkit
 import os
 
 DEBUG = True
-
+# TODO: Change this path to the correct location of wkhtmltopdf.exe !
+PATH_WKHTMLTOPDF = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
 
 ###########################
 # Basic UI elements
@@ -191,7 +192,8 @@ def fillInTemplate(event=None):
     else:
         # File exists - start parsing here!
         print("Processing JSON :))")
-        # TODO this is just one use case !!
+
+        # Processing of FWF Template fill-in
         if selectedTemplate == "FWF":
             with open(file_name, 'r') as f:
                 ma_dmp = json.load(f)
@@ -246,8 +248,6 @@ def resetTemplate(event=None):
     """
     Resets all DMP values to default
     """
-    # TODO change this to modified DMP, not original values
-    # TODO -> most likely just new fill-in
     global selectedTemplate
     selectedTemplate = None
     chooseTemplate()
@@ -523,8 +523,6 @@ def createFWFItems():
 #############################
 # Additional Functions
 
-# TODO all things needed for filling in DMP
-
 def create_html(template, output):
     """
     Creates an HTML file with given template and content.
@@ -532,10 +530,6 @@ def create_html(template, output):
     :param output: Name of the output file
     :return: Name of the output file (html)
     """
-
-    # TODO uncomment this for orginal DMP format (right now difficult with differing section sizes)
-    #templateLoader = jinja2.FileSystemLoader(searchpath="../templates/new")
-
     templateLoader = jinja2.FileSystemLoader(searchpath="../templates")
     templateEnv = jinja2.Environment(loader=templateLoader)
     TEMPLATE_FILE = "template_" + template.lower() + ".html"
@@ -583,15 +577,11 @@ def create_pdf(html):
         "page-size": "A4",
         "orientation": "portrait"
     }
-    # TODO more things depending on template
+
     if selectedTemplate == "FWF":
         pdf_options["orientation"] = "landscape"
 
-
-    # TODO: we will change this path, or use an other library for converting PDF!
-    # TODO: otherwise just say that wkhtmltopdf needs to be pre-installed (and how) and added to windows path
-    path_wkthmltopdf = "C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
-    config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
+    config = pdfkit.configuration(wkhtmltopdf=PATH_WKHTMLTOPDF)
 
     pdfkit.from_file(html, html.replace(".html", ".pdf"), configuration=config, options=pdf_options)
     return html.replace(".html", ".pdf")
