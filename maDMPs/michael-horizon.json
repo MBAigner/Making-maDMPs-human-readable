@@ -34,7 +34,7 @@
 			"dmp_id_type": "HTTP-DOI"
 		},
 		"dataset": [{
-			"data_quality_assurance": "The data will be stored as a comma-separated values (.csv) file. The format is chosen since it is a non-proprietary, open format for storing data. Also, the resulting file size is smaller than for e.g. XML-files. Figure data will be stored as JPEG files, to make it easier to work with them on different systems and also save disc space. The data collected contains meta data attached in the described origin of the resources.",			
+			"data_quality_assurance": "The data will be stored as a comma-separated values (.csv) file. The format is chosen since it is a non-proprietary, open format for storing data. Also, the resulting file size is smaller than for e.g. XML-files. Figure data will be stored as JPEG files, to make it easier to work with them on different systems and also save disc space. The data collected contains meta data attached in the described origin of the resources.",
 			"dataset_id": {
 				"dataset_id": "https://doi.org/10.5281/zenodo.2648172",
 				"dataset_id_type": "HTTP-DOI"
@@ -79,7 +79,7 @@
 			"personal_data": "no",
 			"preservation_statement": "The data will also be publically available in the GitHub repository for at least 5 years. Since the file sizes are small compared to other Data Science projects, noadditional charges for the data repository are expected.",
 			"security_and_privacy": [{
-				"description": "The chosen repository (GitHub) ensures a secure storing of the data by the following aspects: Two-factor Authentication (2FA) (SMS, TOTP), Git over Secure Shell (SSH) and HTTPS, GPG commit-signing verification, Security audit log, For versioning of the data, a connection over SSH is established beforehand to safely transfer the data.",",
+				"description": "The chosen repository (GitHub) ensures a secure storing of the data by the following aspects: Two-factor Authentication (2FA) (SMS, TOTP), Git over Secure Shell (SSH) and HTTPS, GPG commit-signing verification, Security audit log, For versioning of the data, a connection over SSH is established beforehand to safely transfer the data.",
 				"title": "Data access control"
 			}],
 			"sensitive_data": "no",
@@ -93,7 +93,7 @@
 		"language": "en",
 		"modified": "2019-04-21 17:23",
 		"project": [{
-			"description": "In this experiment, the question if the emissions of non-methane volatile organic compounds from transport in Austria have an influence on the yearly average temperature in Innsbruck will be treated.This is done by comparing the trends of transport emissions and average temperature, as well as obtaining the correlation between those two variables.",			
+			"description": "In this experiment, the question if the emissions of non-methane volatile organic compounds from transport in Austria have an influence on the yearly average temperature in Innsbruck will be treated.This is done by comparing the trends of transport emissions and average temperature, as well as obtaining the correlation between those two variables.",
 			"end": "2019-04-21",
 			"funding": "",
 			"start": "2019-04-12",
