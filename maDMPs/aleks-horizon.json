@@ -12,7 +12,7 @@
 		"created": "2019-04-22 23:58",
 		"dm_staff": [{
 				"contributor_type": "DataManager",
-				"mbox": "e01525707@student",
+				"mbox": "e01525707@student.tuwien.ac.at",
 				"name": "Aleksandar Pavlovic",
 				"staff_id": {
 					"staff_id": "0000-0001-6887-9515",
@@ -21,7 +21,7 @@
 			},
 			{
 				"contributor_type": "ProjectLeader",
-				"mbox": "e01525707@student",
+				"mbox": "e01525707@student.tuwien.ac.at",
 				"name": "Aleksandar Pavlovic",
 				"staff_id": {
 					"staff_id": "0000-0001-6887-9515",
@@ -34,15 +34,14 @@
 			"dmp_id_type": "HTTP-DOI"
 		},
 		"dataset": [{
-			"data_quality_assurance": "File naming conventions (separation by underscores) were used. Furthermore a GitHub repository was used for data versioning. Also metadata was provided for this dataset, since it was internally generated.",
-			"dataset_id": {
+			"data_quality_assurance": 			"dataset_id": {
 				"dataset_id": "10.5281/zenodo.2648703",
 				"dataset_id_type": "HTTP-DOI"
 			},
 			"description": "Internally generated dataset, that was merge from two external datasets.",
 			"distribution": [{
 				"access_url": "https://zenodo.org/record/2648703#.XRkCdW5uLD4",
-				"available_till": "2019-08-31",
+				"available_till": "2021-04-22",
 				"byte_size": 362,
 				"data_access": "open",
 				"description": "",
@@ -55,7 +54,7 @@
 					"certified_with": "",
 					"description": "GitHub repository",
 					"geo_location": "",
-					"pid_system": ["10.5281/zenodo.1209833"],
+					"pid_system": ["10.5281/zenodo.2648771"],
 					"support_versioning": "yes",
 					"title": "Effect-GlobalTemperature-NumberOfBirthsVienna"
 				},

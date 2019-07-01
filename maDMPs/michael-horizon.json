@@ -1,0 +1,104 @@
+{
+	"dmp": {
+		"contact": {
+			"contact_id": {
+				"contact_id": "https://orcid.org/0000-0002-4872-9154",
+				"contact_id_type": "HTTP-ORCID"
+			},
+			"mail": "e01529096@student.tuwien.ac.at",
+			"name": "Michael Benedikt Aigner"
+		},
+		"cost": [],
+		"created": "2019-04-21 17:23",
+		"dm_staff": [{
+				"contributor_type": "DataManager",
+				"mbox": "e01529096@student.tuwien.ac.at",
+				"name": "Michael Benedikt Aigner",
+				"staff_id": {
+					"staff_id": "0000-0002-4872-9154",
+					"staff_id_type": "ORCID"
+				}
+			},
+			{
+				"contributor_type": "ProjectLeader",
+				"mbox": "e01529096@student.tuwien.ac.at",
+				"name": "Michael Benedikt Aigner",
+				"staff_id": {
+					"staff_id": "0000-0002-4872-9154",
+					"staff_id_type": "ORCID"
+				}
+			}
+		],
+		"dmp_id": {
+			"dmp_id": "https://doi.org/10.5281/zenodo.2648182",
+			"dmp_id_type": "HTTP-DOI"
+		},
+		"dataset": [{
+			"data_quality_assurance": "The data will be stored as a comma-separated values (.csv) file. The format is chosen since it is a non-proprietary, open format for storing data. Also, the resulting file size is smaller than for e.g. XML-files. Figure data will be stored as JPEG files, to make it easier to work with them on different systems and also save disc space. The data collected contains meta data attached in the described origin of the resources.",			
+			"dataset_id": {
+				"dataset_id": "https://doi.org/10.5281/zenodo.2648172",
+				"dataset_id_type": "HTTP-DOI"
+			},
+			"description": "This output contains the combined data from the average temperature and per year from Inssbruck and the EU pollution index for NMVOCs of Austria. Each row contains comma-separated values (year;avg yearly temperature;pollution indicator for NMVOCs). The temperature is measured in Celsius degrees. The pollution indicator shows the value of the EU pollution index for NMVOCs (based on year 200, where indicator=100).",
+			"distribution": [{
+				"access_url": "https://zenodo.org/record/2648172#.XRorROgzZPY",
+				"available_till": "2024-04-21",
+				"byte_size": 60000,
+				"data_access": "open",
+				"description": "As a persisent identifier of the data, a Digital Object Identifier (DOI) will be used so that people can find the data, as well data citation and reuse can be tracked. A DOI will be added for the source code and every of the resulting output files. The DOIs are added to the repository for this experiment.",
+				"download_url": "https://zenodo.org/record/2648172#.XRorROgzZPY",
+				"format": "csv",
+				"host": {
+					"availability": "99,9",
+					"backup__frequency": "monthly",
+					"backup_type": "hard disc",
+					"certified_with": "",
+					"description": "GitHub repository",
+					"geo_location": "",
+					"pid_system": ["https://doi.org/10.5281/zenodo.2648176"],
+					"support_versioning": "yes",
+					"title": "v"
+				},
+				"license": [{
+					"license_ref": "https://opensource.org/licenses/MIT",
+					"start_date": "2019-04-21"
+				}],
+				"title": "Combined data of the yearly average temperature of Innsbruck and the pollution emissions of NMVOCs from transport in Austria"
+			}],
+			"issued": "2019-04-21",
+			"keyword": ["temperature in Innsbruck", "transport pollution emission indicator,"],
+			"language": "en",
+			"metadata": {
+				"description": "Meta data is stored under /documentation/metadata.xml and contains the following information: Title of the experiment, Creator, Subject, A more detailed description of the experiment, Date when the experiment was executed, Type/purpose of the application, Format,Sources used, Language, Years covered by the experiment dtaa, Rights for using the data / sourcecode (we provide free access here). As a standard for writing the meta data, the Dublin Core has been in use, since it is a basic, domain-agnostic standard which can be easily understood and implemented. The meta data as well as the description file is created by hand.",
+				"language": "en",
+				"metadata_id": {
+					"metadata_id": "http://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+					"metadata_id_type": "URL"
+				}
+			},
+			"personal_data": "no",
+			"preservation_statement": "The data will also be publically available in the GitHub repository for at least 5 years. Since the file sizes are small compared to other Data Science projects, noadditional charges for the data repository are expected.",
+			"security_and_privacy": [{
+				"description": "The chosen repository (GitHub) ensures a secure storing of the data by the following aspects: Two-factor Authentication (2FA) (SMS, TOTP), Git over Secure Shell (SSH) and HTTPS, GPG commit-signing verification, Security audit log, For versioning of the data, a connection over SSH is established beforehand to safely transfer the data.",",
+				"title": "Data access control"
+			}],
+			"sensitive_data": "no",
+			"technical_resource": [],
+			"title": "Combined data of the yearly average temperature of Innsbruck and the pollution emissions of NMVOCs from transport in Austria",
+			"type": "dataset"
+		}],
+		"description": "This DMP contains information for the Experiment 'Observing the correlation between the yearly average temperature of Innsbruck and the pollution emissions of NMVOCs from transport in Austria'.",
+		"ethical_issues_description": "Because the data collected and created contains no information about certain individuals, just averaged temperature values and the emission from transport indicator without reference to any human contributors or institutions causing the emissions, the data does not need to be anonymized. Therefore also no security issues of transferring and storing the data publically are addressed here.Permissions for sharing and publishing the data are ensured since the data collected was published under the CC-BY licence.",
+		"ethical_issues_exist": "no",
+		"language": "en",
+		"modified": "2019-04-21 17:23",
+		"project": [{
+			"description": "In this experiment, the question if the emissions of non-methane volatile organic compounds from transport in Austria have an influence on the yearly average temperature in Innsbruck will be treated.This is done by comparing the trends of transport emissions and average temperature, as well as obtaining the correlation between those two variables.",			
+			"end": "2019-04-21",
+			"funding": "",
+			"start": "2019-04-12",
+			"title": "Observing the correlation between the yearly average temperature of Innsbruck and the pollution emissions of NMVOCs from transport in Austria"
+		}],
+		"title": "DMP for the Experiment 'Observing the correlation between the yearly average temperature of Innsbruck and the pollution emissions of NMVOCs from transport in Austria' created with DMP Online."
+	}
+}
