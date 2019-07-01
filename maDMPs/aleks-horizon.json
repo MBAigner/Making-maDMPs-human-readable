@@ -11,23 +11,24 @@
 		"cost": [],
 		"created": "2019-04-22 23:58",
 		"dm_staff": [{
-			"contributor_type": "DataManager",
-			"mbox": "e01525707@student",
-			"name": "Aleksandar Pavlovic",
-			"staff_id": {
-				"staff_id": "0000-0001-6887-9515",
-				"staff_id_type": "ORCID"
+				"contributor_type": "DataManager",
+				"mbox": "e01525707@student",
+				"name": "Aleksandar Pavlovic",
+				"staff_id": {
+					"staff_id": "0000-0001-6887-9515",
+					"staff_id_type": "ORCID"
+				}
+			},
+			{
+				"contributor_type": "ProjectLeader",
+				"mbox": "e01525707@student",
+				"name": "Aleksandar Pavlovic",
+				"staff_id": {
+					"staff_id": "0000-0001-6887-9515",
+					"staff_id_type": "ORCID"
+				}
 			}
-		},
-		{
-			"contributor_type": "ProjectLeader",
-			"mbox": "e01525707@student",
-			"name": "Aleksandar Pavlovic",
-			"staff_id": {
-				"staff_id": "0000-0001-6887-9515",
-				"staff_id_type": "ORCID"
-			}
-		}],
+		],
 		"dmp_id": {
 			"dmp_id": "10.5281/zenodo.2648805",
 			"dmp_id_type": "HTTP-DOI"
@@ -56,7 +57,7 @@
 					"geo_location": "",
 					"pid_system": ["10.5281/zenodo.1209833"],
 					"support_versioning": "yes",
-					"title": "Effect-GlobalTemperature-NumberOfBirthsVienna",
+					"title": "Effect-GlobalTemperature-NumberOfBirthsVienna"
 				},
 				"license": [{
 					"license_ref": "https://opensource.org/licenses/MIT",
@@ -71,8 +72,8 @@
 				"description": "Provides an explanation of the columns of the dataset.",
 				"language": "en",
 				"metadata_id": {
-					"metadata_id": , //TODO: Create a metadata id
-					"metadata_id_type":
+					"metadata_id": "http://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+					"metadata_id_type": "URL"
 				}
 			},
 			"personal_data": "no",
@@ -80,7 +81,7 @@
 			"security_and_privacy": [{
 				"description": "The data is safely stored in a public GitHub repository.",
 				"title": "Data write access control"
-			}] ,
+			}],
 			"sensitive_data": "no",
 			"technical_resource": [],
 			"title": "mergedData",
