@@ -2,7 +2,9 @@
 
 ## Overview
 
-..
+Machine-actionable DMPs help to present information in a structured way. However, some funders still require human-readable DMPs.
+
+Thats why we developed our tool, making maDMPs human-readable, enabling an easy and user-friendly generation of human-readable DMPs out of maDMPs.
 
 ## Folder Structure
 
@@ -25,7 +27,14 @@ The main file of our tool can be found in the directory  ```scripts```. In the f
 
 Also, the software  ```wkhtmltopdf ``` needs to be installed, for the creation of pdf documents. Guides how to install this on a certain operating system can be found [here](https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf/). We used version 0.12.4 for our project.
 
-## Sample maDMPs
+## How-to
+
+
+## Original human-readable DMPs
+
+Our original human-readable DMPs, used for the creation of the maDMPs, can be found here.
+
+## maDMP samples
 
 The machine-actionable DMPs used for the evaluation of our tool can be used [here](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/maDMPs).
 
@@ -33,7 +42,7 @@ The machine-actionable DMPs used for the evaluation of our tool can be used [her
 
 Can be found here.
 
-## Sample hrDMPs
+## hrDMP samples
 
 The human-readable DMPs created with our tool can be found under [this](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/hrDMPs) link.
 
