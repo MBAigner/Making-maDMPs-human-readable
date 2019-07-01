@@ -24,7 +24,7 @@ After the template is selected, the GUI elements are extended by those shown in 
 The screen shows mainly the contents of the Horizon 2020 template, where each field that needs to be filled in can be edited by the user. We also added a possibility to scroll in the text areas containing the answers according certain questions, if the answers get to big to be displayed
 fully in the GUI.
 
-The elements of the FWF template that are editable are:
+The elements of the Horizon 2020 template that are editable are:
 
 * Abstract (containing title, creator, ...)
 * 1. Data Summary
