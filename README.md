@@ -16,7 +16,9 @@ For the purpose of transforming machine-actionable DMPs into human-readable ones
 * adapt automatically generated translation for a better fit to the users needs
 * save the resulting, human-readable DMP as HTML and/or PDF document
 
-Some more detailed examples about how to use our tool can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md)
+Some more detailed examples about how to use our tool can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md).
+
+The code implemented for our tool can be found under this site: [source code](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/scripts).
 
 ## Folder Structure
 
@@ -32,8 +34,7 @@ The main file of our tool can be found in the directory  ```scripts```. In the f
 ### Needed libraries and pre-installed software
 
 * ```python``` version 3.6
-* ```tkinter``` version ..
-* ```json``` version ..
+* ```tkinter``` version 8.6
 * ```jinja2``` version 2.10.1
 * ```pdfkit``` version 0.6.1
 
