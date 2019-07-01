@@ -480,14 +480,14 @@ def createFWFItems():
     ethicalText2 = tk.Text(root, width=70, height=5)
     ethicalText2.insert(END,
                         "Are there any ethical barriers to making the research data fully or partially accessible? If applicable, how are you planning to deal with sensitive data during and after the project? Consider Ethics for researchers published by the European Commission or The European Code of Conduct for Research Integrity")
-    ethicalText2.grid(row=9, column=1, columnspan=3, sticky=W)
+    ethicalText2.grid(row=9, column=4, columnspan=3, sticky=W)
 
     generatedDataLabel = tk.Label(root, text="No data will be generated\nor analysed", font="Helvetica 10")
-    generatedDataLabel.grid(row=9, column=3, sticky=W)
+    generatedDataLabel.grid(row=10, column=3, sticky=W)
     generatedDataText = tk.Text(root, width=70, height=5)
     generatedDataText.insert(END,
                              "The FWF recognises that some projects will not generate or analyse research data and similar materials. In these cases, a short explanation is required.")
-    generatedDataText.grid(row=9, column=4, columnspan=3, sticky=W)
+    generatedDataText.grid(row=10, column=4, columnspan=3, sticky=W)
 
 
 #############################
