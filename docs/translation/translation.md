@@ -1,4 +1,4 @@
-# Translation scheme of maDMPs into hrDMPs
+# Translation Scheme of maDMPs into hrDMPs
 
 Here, we want to give an overview about the characteristics we used for a conversion from machine-actionable into human-readable DMPs.
 
