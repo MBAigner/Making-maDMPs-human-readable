@@ -49,6 +49,8 @@ We want to show some use-case how to use our tool for an effective translation o
 
 The code implemented for our tool can be found under this folder: [source code](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/scripts).
 
+The tool can be started over the command line from the root directory of our project with the command python ```./scripts/gui.py```.
+
 ## Original human-readable DMPs
 
 Our original human-readable DMPs, used for the creation of the maDMPs, can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/original_hrDMPs).
