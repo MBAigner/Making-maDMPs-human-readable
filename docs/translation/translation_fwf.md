@@ -7,10 +7,10 @@
     * dataset/distribution/bytesize
 *	Reused data? This question cannot be answered from the maDMP
 
-**How will the research data be generated and which methods will be used? **
+**How will the research data be generated and which methods will be used?**
 *	Used attributes: dataset/description
 
-**How will you structure the data and handle versioning? **
+**How will you structure the data and handle versioning?**
 *	Used attributes: dataset/host/support_versioning
 
 **Who is the target audience?**
@@ -22,7 +22,7 @@
     * dataset/metadata_id/metadata_id_type
 *	Why they are used is not explained by the RDA Standard.
 
-**What information is needed for the data to be findable, accessible, interoperable and re-usable (FAIR) in the future? **
+**What information is needed for the data to be findable, accessible, interoperable and re-usable (FAIR) in the future?**
 
 We include the following information for the according characteristics:
 *	**Accessible**:
@@ -41,20 +41,20 @@ We include the following information for the according characteristics:
     *	distribution/host/backup_frequency
     * distribution/host/backup_type
 
-**Is the data machine-readable? **
+**Is the data machine-readable?**
 * **Interoperable**
     * We look if dataset/distribution/format is machine readable
 
 **How are you planning to document this information?**
 *	This is not answered by the madDMP
 
-**What quality assurance processes will you adopt? **
+**What quality assurance processes will you adopt?**
 *	dataset/data_quality_assurance (e.g. naming conventions)
 
 **How will the consistency and quality of data collection be controlled and documented? (This may include processes such as repeat samples or measurements, standardised data capture, peer review of data or representation with controlled vocabularies.)**
 *	Not explained in JSON!
 
-**How and when will the data be shared and made accessible? **
+**How and when will the data be shared and made accessible?**
 * Used attributes:
    *	dataset/Distribution/access_url
    *	dataset/Distribution/available_till
@@ -65,7 +65,7 @@ We include the following information for the according characteristics:
    *	dataset/issued
 
 
-**What repository will you be using? **
+**What repository will you be using?**
 * Used attributes:
    *	dataset/host/description
    *	dataset/host/geo_location
@@ -78,16 +78,16 @@ We include the following information for the according characteristics:
 **What data are to be preserved for the long-term, and what data will not be stored?** 
 *	dataset/preservation_statement
 
-**How and where will the data be stored and backed up during the research? **
+**How and where will the data be stored and backed up during the research?**
 *	dataset/host/geo_location
 
-**How and where will the data be stored after the project ends? **
+**How and where will the data be stored after the project ends?**
 *	dataset/preservation_statement
 
 **For how long will the data be stored? **
 *	dataset/distribution/available_till
 
-**Are there any costs that need to be covered for storage? **
+**Are there any costs that need to be covered for storage?**
 *	dataset/cost/*
 
 **At what point during or after the project will the data be stored?**
