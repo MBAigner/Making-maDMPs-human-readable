@@ -18,8 +18,6 @@ For the purpose of transforming machine-actionable DMPs into human-readable ones
 
 Some more detailed examples about how to use our tool can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md).
 
-The code implemented for our tool can be found under this site: [source code](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/scripts).
-
 ## Folder Structure
 
 *  ```templates```: Contains template files that will be feeded with maDMP data when executing our tool.
@@ -43,6 +41,8 @@ Also, the software  ```wkhtmltopdf ``` needs to be installed, for the creation o
 ## How-to
 
 We want to show some use-case how to use our tool for an effective translation of maDMPs into hrDMPs. Some examples can be found here: [How-To](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/examples/example.md).
+
+The code implemented for our tool can be found under this folder: [source code](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/scripts).
 
 ## Original human-readable DMPs
 
