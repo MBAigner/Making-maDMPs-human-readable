@@ -3,8 +3,7 @@
 <body>
 	<p>Data Officer</p>
 	<p>
-	Who is responsible for the data management and the DMP of the project (name/email address)?<br />
-	{{ contact }}
+	{{ data_officer }}
 	</p>
 	
 	<p>I Data Characteristics</p>
@@ -12,67 +11,53 @@
 	I.1 Description of the data
 	</p>
 	<p>
-	What kinds of data/source code will be generated or reused (type, format, volume)?
-How will the research data be generated and which methods will be used?
-How will you structure the data and handle versioning?
-Who is the target audience?
+	{{ data_characteristics }}
 	</p>
 	
 	
 <p>II Documentation and Metadata</p>
 <p>II.1 Metadata standards</p>
 <p>
-What metadata standards (if any) will be in use and why? (see Digital Curation Centre)
+{{ meta_standards }}
 </p>
 
 <p>II.2 Documentation of data</p>
 <p>
-What information is needed for the data to be findable, accessible, interoperable and re-usable (FAIR) in the future?
-Is the data machine-readable?
-How are you planning to document this information?
+{{ data_documentation }}
 </p>
 
 <p>II.3 Data quality control</p>
 <p>
-What quality assurance processes will you adopt?
-How will the consistency and quality of data collection be controlled and documented? (This may include processes such as repeat samples or measurements, standardised data capture, peer review of data or representation with controlled vocabularies.)
-</p>
+{{ data_quality }}</p>
 
 
 <p>III Data Availability and Storage</p>
 
 <p>III.1 Data sharing strategy</p>
 <p>
-How and when will the data be shared and made accessible?
-What repository will you be using?
-What persistent identifier will be used?
+{{ data_sharing }}
 </p>
 
 <p>III.2 Data storage strategy</p>
 <p>
-What data are to be preserved for the long-term, and what data will not be stored? How and where will the data be stored and backed up during the research? How and where will the data be stored after the project ends? For how long will the data be stored? Are there any costs that need to be covered for storage? At what point during or after the project will the data be stored? Are there any technical barriers to making the research data fully or partially accessible?
+{{ data_storage }}
 </p>
 
 <p>IV Legal and Ethical Aspects</p>
 
 <p>IV.1 Legal aspects</p>
 <p>
-Are there any legal barriers to making the research data fully or partially accessible?
-Who owns the data?
-What licence for reuse are you planning to attach to the data?
-Are there any restrictions on the re-use of the data? If so, why?
+{{ legal }}
 </p>
 
 <p>IV.2 Ethical aspects</p>
 <p>
-Are there any ethical barriers to making the research data fully or partially accessible?
-If applicable, how are you planning to deal with sensitive data during and after the project?
-Consider "Ethics for researchers” published by the European Commission or "The European Code of Conduct for Research Integrity".
+{{ ethical }}
 </p>
 
 <p>No data will be generated or analysed</p>
 <p>
-The FWF recognises that some projects will not generate or analyse research data and similar materials. In these cases, a short explanation is required.
+{{ generation }}
 </p>
 
 <body>
