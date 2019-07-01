@@ -2,115 +2,115 @@
 	"dmp": {
 		"contact": {
 			"contact_id": {
-				"contact_id": ,
-				"contact_id_type":
+				"contact_id": "",
+				"contact_id_type": ""
 			},
-			"mail": ,
-			"name":
+			"mail": "",
+			"name": ""
 		},
 		"cost": [{
-			"currency_code": ,
-			"description": ,
-			"title": ,
-			"value":
+			"currency_code": "",
+			"description": "",
+			"title": "",
+			"value": ""
 		}],
-		"created": ,
+		"created": "",
 		"dm_staff": [{
-			"contributor_type": ,
-			"mbox": ,
-			"name": ,
+			"contributor_type": "",
+			"mbox": "",
+			"name": "",
 			"staff_id": {
-				"staff_id": ,
-				"staff_id_type":
+				"staff_id": "",
+				"staff_id_type": ""
 			}
 		}],
 		"dmp_id": {
-			"dmp_id": ,
-			"dmp_id_type":
+			"dmp_id": "",
+			"dmp_id_type": ""
 		},
 		"dataset": [{
-			"data_quality_assurance": ,
+			"data_quality_assurance": "",
 			"dataset_id": {
-				"dataset_id": ,
-				"dataset_id_type":
+				"dataset_id": "",
+				"dataset_id_type": ""
 			},
-			"description": ,
+			"description": "",
 			"distribution": [{
-				"access_url": ,
-				"available_till": ,
-				"byte_size": ,
-				"data_access": ,
-				"description": ,
-				"download_url": ,
-				"format": ,
+				"access_url": "",
+				"available_till": "",
+				"byte_size": "",
+				"data_access": "",
+				"description": "",
+				"download_url": "",
+				"format": "",
 				"host": {
-					"availability": ,
-					"backup__frequency": ,
-					"backup_type": ,
-					"certified_with": ,
-					"description": ,
-					"geo_location": ,
+					"availability": "",
+					"backup__frequency": "",
+					"backup_type": "",
+					"certified_with": "",
+					"description": "",
+					"geo_location": "",
 					"pid_system": [],
-					"support_versioning": ,
-					"title": ,
+					"support_versioning": "",
+					"title": ""
 				},
 				"license": [{
-					"license_ref": ,
-					"start_date": 
+					"license_ref": "",
+					"start_date": ""
 				}],
-				"title": 
+				"title": ""
 			}],
-			"issued": ,
+			"issued": "",
 			"keyword": [],
-			"language": ,
+			"language": "",
 			"metadata": {
-				"description": ,
-				"language": ,
+				"description": "",
+				"language": "",
 				"metadata_id": {
-					"metadata_id": ,
-					"metadata_id_type":
+					"metadata_id": "",
+					"metadata_id_type": ""
 				}
 			},
-			"personal_data": ,
-			"preservation_statement": ,
+			"personal_data": "",
+			"preservation_statement": "",
 			"security_and_privacy": [{
-				"description": ,
-				"title": 
-			}] ,
-			"sensitive_data": ,
-			"technical_resource": [{
-				"description": ,
-				"resource_id": {
-					"technical_reosurce_id": ,
-					"technical_reosurce_id_type":
-				},
+				"description": "",
+				"title": ""
 			}],
-			"title": ,
-			"type":
+			"sensitive_data": "",
+			"technical_resource": [{
+				"description": "",
+				"resource_id": {
+					"technical_reosurce_id": "",
+					"technical_reosurce_id_type": ""
+				}
+			}],
+			"title": "",
+			"type": ""
 		}],
-		"description": ,
-		"ethical_issues_description": ,
-		"ethical_issues_exist": ,
-		"ethical_issues_report": ,
-		"language": ,
-		"modified": ,
+		"description": "",
+		"ethical_issues_description": "",
+		"ethical_issues_exist": "",
+		"ethical_issues_report": "",
+		"language": "",
+		"modified": "",
 		"project": [{
-			"description": ,
-			"end": ,
+			"description": "",
+			"end": "",
 			"funding": {
 				"funder_id": {
-					"funder_id": ,
-					"funder_id_type": 
+					"funder_id": "",
+					"funder_id_type": ""
 				},
-				"funding_status": ,
+				"funding_status": "",
 				"grant_id": {
-					"grant_id": ,
-					"grant_id_type": 
-				},
+					"grant_id": "",
+					"grant_id_type": ""
+				}
 			},
-			"start": ,
-			"title": 
+			"start": "",
+			"title": ""
 		}],
-		"title": 
+		"title": ""
 	}
 }
