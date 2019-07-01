@@ -84,7 +84,7 @@ We include the following information for the according characteristics:
 **How and where will the data be stored after the project ends?**
 *	dataset/preservation_statement
 
-**For how long will the data be stored? **
+**For how long will the data be stored?**
 *	dataset/distribution/available_till
 
 **Are there any costs that need to be covered for storage?**
