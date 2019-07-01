@@ -267,6 +267,20 @@ def fillInTemplate(event=None):
             fairText1.insert(END, parseDMP(ma_dmp))
             fairText1.insert(END, project_data["fundingAndResources"])
 
+            fairText2.delete("1.0", END)
+            fairText2.insert(END, datasetData["preservation"])
+            fairText2.insert(END, datasetData["personalAndSensitiveInfo"])
+            fairText2.insert(END, datasetData["securityInfo"])
+            fairText2.insert(END, datasetData["accessInfo"])
+            fairText2.insert(END, datasetData["licenseInfo"])
+            fairText2.insert(END, datasetData["generalDescription"])
+            fairText2.insert(END, datasetData["hostInfo"])
+            fairText2.insert(END, datasetData["metaIdentifiers"])
+
+
+            fairText3.delete("1.0", END)
+            fairText3.insert(END, datasetData["metaIdentifiers"])
+            fairText3.insert(END, datasetData["DataQuality"])
 
 
 def resetTemplate(event=None):
