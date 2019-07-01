@@ -31,7 +31,7 @@ We include the following information for the according characteristics:
     *	dataset/distribution/host/description (which respository was used)
     *	pid_system (if used!)
 *	**Findable**:
-    *	Dataset/keyword -> keywords usable for search
+    *	Dataset/keyword  (keywords usable for search)
 *	**Re-usable**:
     *	dataset/licence/license_ref (which licence was used for reusability)
     *	Metadata used (see above: dataset/metdata/metadata_id/metadata_id, dataset/metdata/metadata_id/metadata_id_type)
@@ -43,10 +43,10 @@ We include the following information for the according characteristics:
 
 **Is the data machine-readable?**
 * **Interoperable**
-    * We look if dataset/distribution/format is machine readable
+    * This is not answered by the maDMP
 
 **How are you planning to document this information?**
-*	This is not answered by the madDMP
+*	This is not answered by the maDMP
 
 **What quality assurance processes will you adopt?**
 *	dataset/data_quality_assurance (e.g. naming conventions)
