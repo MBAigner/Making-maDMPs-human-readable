@@ -36,7 +36,7 @@ The main file of our tool can be found in the directory  ```scripts```. In the f
 * ```jinja2``` version 2.10.1
 * ```pdfkit``` version 0.6.1
 
-### Pre-installed software
+### Needed pre-installed software
 
 The software  ```wkhtmltopdf``` needs to be installed for the creation of pdf documents, since it is used by the ```pdfkit``` library.
 
@@ -52,17 +52,17 @@ The code implemented for our tool can be found under this folder: [source code](
 
 Our original human-readable DMPs, used for the creation of the maDMPs, can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/original_hrDMPs).
 
-## maDMP samples
+## Machine-actionable DMP Examples
 
 The machine-actionable DMPs used for the evaluation of our tool can be used [here](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/maDMPs).
 
-## Parsing scheme
+## Translation Scheme
 
 Here, we want to demonstrate the scheme we used for parsing the structured information of an maDMP into the necessary fields of an hrDMP, supporting the FWF and Horizon 2020 DMP templates.
 
 Our used scheme can be found [here](https://github.com/MBAigner/Making-maDMPs-human-readable/blob/master/docs/translation/translation.md).
 
-## hrDMP samples
+## Human-readable DMP Examples
 
 The human-readable DMPs created with our tool can be found under [this](https://github.com/MBAigner/Making-maDMPs-human-readable/tree/master/hrDMPs) link.
 
