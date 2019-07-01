@@ -1,6 +1,6 @@
 # Translation Scheme for the Horizon 2020 Template
 
-***Abstract of the DMP**
+**Abstract of the DMP**
 
 * Title: dmp/title
 * A Data Management Plan created using DMPonline 
