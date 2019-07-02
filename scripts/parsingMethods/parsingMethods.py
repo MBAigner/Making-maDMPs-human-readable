@@ -42,15 +42,17 @@ def parse_project(ma_dmp):
         title = project["title"]
         funding = project.get("funding", "")
         if funding != "":
+            funder_id = funding["funder_id"]["funder_id"]
+            funder_id_type = funding["funder_id"]["funder_id_type"]
             result["fundingAndResources"] = result["fundingAndResources"] + "It will be funded by " + \
-                funding["funder_id"]["funder_id"] + " (" + funding["funder_id"]["funder_id_type"] + ").\n"
+                                            funder_id + " (" + funder_id_type + ").\n"
 
-        if funding["funding_status"] != "":
-            result["fundingAndResources"] = result["fundingAndResources"] + "The funding has been " + \
-                                            funding["funding_status"] + ". "
+            if funding["funding_status"] != "":
+                result["fundingAndResources"] = result["fundingAndResources"] + "The funding has been " + \
+                                                funding["funding_status"] + ". "
 
-        result["fundingAndResources"] = result["fundingAndResources"] + "The grant is identified by " + \
-            funding["grant_id"]["grant_id"] + " (" + funding["grant_id"]["grant_id_type"] + ").\n"
+            result["fundingAndResources"] = result["fundingAndResources"] + "The grant is identified by " + \
+                funding["grant_id"]["grant_id"] + " (" + funding["grant_id"]["grant_id_type"] + ").\n"
 
         result["description"] = result["description"] + project.get("description", "") + "\n"
     return result

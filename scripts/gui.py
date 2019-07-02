@@ -285,6 +285,30 @@ def fillInTemplate(event=None):
             fairText3.insert(END, datasetData["metaIdentifiers"])
             fairText3.insert(END, datasetData["DataQuality"])
 
+            fairText4.delete("1.0", END)
+            fairText4.insert(END, datasetData["DataQuality"])
+            fairText4.insert(END, datasetData["licenseInfo"])
+            fairText4.insert(END, datasetData["securityInfo"])
+            fairText4.insert(END, datasetData["data_available_till"])
+
+            cost = parse_cost(ma_dmp)
+            staff = parse_staff(ma_dmp)
+            resourceText.delete("1.0", END)
+            resourceText.insert(END, cost)
+            resourceText.insert(END, staff)
+            resourceText.insert(END, datasetData["preservation"])
+
+            securityText.delete("1.0", END)
+            securityText.insert(END, datasetData["personalAndSensitiveInfo"])
+            securityText.insert(END, datasetData["securityInfo"])
+
+            ethics = parseEthics(ma_dmp)
+            ethicalText.delete("1.0", END)
+            ethicalText.insert(END, ethics)
+
+            funding = parse_project(ma_dmp)
+            otherText.delete("1.0", END)
+            otherText.insert(END, funding["fundingAndResources"])
 
 def resetTemplate(event=None):
     """
