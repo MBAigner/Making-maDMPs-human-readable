@@ -62,7 +62,7 @@ def parse_abstract(ma_dmp):
     last_modified = ma_dmp["dmp"]["modified"]
     name, mail, id, type = get_contact(ma_dmp)
 
-    return title + "\n" + "A Data Management Plan created using DMPonline" + \
+    return title + "\n" + "A Data Management Plan created using DMPonline\n" + \
         "Creator: " + name + "(" + str(id) + ")\n" + \
         "Affiliation: \n" + \
         "Template: European Commission (Horizon 2020)\n" + \
