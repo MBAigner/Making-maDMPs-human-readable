@@ -199,7 +199,6 @@ def fillInTemplate(event=None):
         # Processing of FWF Template fill-in
         if selectedTemplate == "FWF":
 
-
             cost_data = parse_cost(ma_dmp)
             datasetData = parse_dataset(ma_dmp)
             dataDescriptionText1.delete("1.0", END)
@@ -245,6 +244,9 @@ def fillInTemplate(event=None):
             dataOfficerText.delete("1.0", END)
             dataOfficerText.insert(END, contact_data)
         else:
+            global title
+            title = ma_dmp["dmp"]["title"]
+
             abstractText.delete("1.0", END)
             abstractText.insert(END, parse_abstract(ma_dmp))
 
@@ -587,7 +589,7 @@ def create_html(template, output):
                                           ethical=ethicalText2.get(1.0,END).replace("\n", "<p />"),
                                           generation=generatedDataText.get(1.0,END).replace("\n", "<p />"))
     else:
-        # TODO think about how to extend DMP with title!
+        global title
         outputText = real_template.render(title=title,
                                           abstract=abstractText.get(1.0,END).replace("\n", "<p />"),
                                           data_summary=dataDescriptionText1.get(1.0,END).replace("\n", "<p />"),
